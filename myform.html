@@ -5,51 +5,106 @@
     <title>myform</title>
 </head>
 <body>
+    <div>
 
     <form>
-        <h1>練習</h1>
+        
         <fieldset>
-            <legend>我的資料</legend>
+            <legend>個人資料</legend>
             <label for="username">姓名</label>
-            <input type="text" name="username">
-            <br>
-            
-            <label for="usermail">電子信箱</label>
-            <input type="email" name="usermail">
-            <br>
+            <input type="text"  id="username" name="username" required>
+            <br><br>
+            <label for="userbd">出生日期</label>
+            <input type="date" max="2023-12-01"  id="userbd" name="userbd" required>
+            <br><br>
             
             <label for="userphone">手機號碼</label>
-            <input type="number" name="userphone">
+            <input type="tel"  id="userphone" name="userphone"  pattern="[0-9]{4}-[0-9]{6}" placeholder="範例:09XX-XXXXXX" required>
             <br>
             
+            
+            <hr>
+            <label>性別</label>
+            <input type="radio" id="gender1" name="gender" value="girl">
+            <label for="gender1">女生</label>
+            <input type="radio" id="gender2" name="gender" value="boy">
+            <label for="gender2">男生</label>
+            <br><br>
+            <label>您的年齡</label>
+            <input type="radio" id="age1" name="age" value="20以下">
+            <label for="age1">20歲以下</label>
+            <input type="radio" id="age2" name="age" value="40以下">
+            <label for="age2">21~40歲</label>
+            <input type="radio" id="age3" name="age" value="41以上">
+            <label for="age3">41歲以上</label>
+            <br><br>
+            <label>您所在的地區</label>
+            <input type="radio" id="place1" name="place" value="asia">
+            <label for="place1">亞洲</label>
+            <input type="radio" id="place2" name="place" value="africa">
+            <label for="place1">非洲</label>
+            <input type="radio" id="place3" name="place" value="north America">
+            <label for="place1">北美洲</label>
+            <input type="radio" id="place4" name="place" value="south America">
+            <label for="place1">南美洲</label>
+            <input type="radio" id="place5" name="place" value="antarctica">
+            <label for="place1">南極洲</label>
+            <input type="radio" id="place6" name="place" value="europe">
+            <label for="place1">歐洲</label>
+            <input type="radio" id="place7" name="place" value="oceania">
+            <label for="place1">大洋洲</label>
+            <br><br>
+            <label>您會的程式語言</label>
+            <input type="checkbox" id="lang1" name="lang" value="html">
+            <label for="lang1">HTML</label>
+            <input type="checkbox" id="lang2" name="lang" value="css">
+            <label for="lang2">CSS</label>
+            <input type="checkbox" id="lang3" name="lang" value="js">
+            <label for="lang13">JavaScript</label>
+            <br><br>
+            <label>喜歡的電影類型</label>
+            <select name="movie">
+                <option id="movie5" > </option>
+                <option id="movie1">恐怖</option>
+                <option id="movie2">搞笑</option>
+                <option id="movie3">科幻</option>
+                <option id="movie4">動作</option>
+            </select>
+            <br>
+            
+            
+        
+        </fieldset><br>
+       
+        
+    
+        <fieldset>
+        <legend>註冊資料</legend>
+            <label for="usermail">電子信箱</label>
+            <input type="email"  id="usermail" name="usermail" required>
+            <br> <br>
             <label for="userpassword">密碼</label>
-            <input type="password" name="userpassword">
-            <br>
-            
+            <input type="password" id="userpassword" name="userpassword" required>
+            <br> <br>
             <label for="userconfirm">確認密碼</label>
-            <input type="password" name="userconfirm">
-            <br>
-            <hr>
-            <label>喜歡的語言</label>
-            <input type="radio" name="lang1">HTML
-            <input type="radio" name="lang2">CSS
-            <input type="radio" name="lang3">JavaScript
-            <br>
-            <input type="submit" value="確認">
-            <hr>
-            <label>喜歡的地區</label>
-            <input type="checkbox" name=""
-        
-        
-        
+            <input type="password" id="userconfirm" name="userconfirm" required>
+            <br> <br>
+            <label for="userurl">網址</label>
+            <input type="url"  id="userurl" name="userurl" required>
+            <br> <br>
+            
         </fieldset>
+        <br>
+        <input type="submit" value="確認">
+        <input type="reset" value="清除">
         
         
-    
     </form>
+    <br>
+     <a href="aboutme.html">返回主頁</a>
+   
     
     
-    
-    
+    </div>
     
 </body>
