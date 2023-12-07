@@ -11,33 +11,26 @@
 </head>
 
 <body>
-    <nav>
+    <div>
         <p><a href="#a">About</a>
         <a href="#b">Details</a>
         <a href="#c">Educate</a>
         <a href="#d">Experience</a>
         <a href="#e">Skill</a>
         <a href="#f">Personal Portfolio</a></p>
-    </nav>
-    <section>
-        <img src="S__47767563.jpg" >
+    
+
+        <img src="S__47767563.jpg" height="200">
         <h1>Sandy Wu</h1>
         <p>Position Desired<br>-UI/UX Engineer</p>
-    </section>
+ 
     <hr>
-    <section>
-     #是否要用DIV?
+ 
         <div id="a"><p>Hello, Im Sandy Wu,live in Taoyuan, work at Taoyuan Airport.<br>
         My hobbie is go to gym and do some workout, I would like to be a muscle girl.<br>
         And I trying to learn some html class at LCC, wish I will be a good engineer one day.</p></div>
-    </section>
+   
     <hr>
-    <section>
-        
-       
-
-
-        
         <h2 id="b">Details</h2>
     <ul>
         <li><b>Age:</b> 25 years old</li>
@@ -52,8 +45,7 @@
         <li><b>High School Degree</b><br>-Yung Ping Technological Senior High School</li>
         <li><b>Junior High School</b><br>-Dong An Junior High School</li>
         <li><b>Elementary school</b><br>-Dong An Elementary school</li></ul>
-    </section>
-    <section>
+   
         <h2 id="d">Experience</h2>
     <ul>
         <li>Gymmars Personal Tranner</li>
@@ -70,10 +62,8 @@
         <li>AED-CPT</li>
         <li>FITNESS C CLASS CPT</li>
     </ul>
-    </section>
     
-    <section>
-    <h2 id="f">Personal Portfolio </h2>
+        <h2 id="f">Personal Portfolio </h2>
         
 <!--        #video用法練習#controls=影片控制條 autoplay=自動撥放 loop=結束後循環撥放 muted=靜音 poster=相片頁-->
         <video  width="400" height="400" controls  loop muted poster="https://images.pexels.com/photos/14251880/pexels-photo-14251880.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
@@ -81,12 +71,35 @@
             <p>您的瀏覽器不支援影片</p>
         </video>
         <br>
+        
+        <form>
+            <strong>聯絡我</strong>
+            <br>
+            <label>Email Address</label>
+            <br>
+                <input type="email" id="usermail" name="usermail" size="60" required>
+            <br><br>
+            <label>姓名或暱稱</label>
+            <br>
+                <input type="text" id="username" name="username" size="60" required>
+            <br><br>
+            <label>您的網址</label>
+            <br>
+                <input type="url" id="userurl" name="userurl" size="60" required>
+            <br><br>
+            <input type="submit" value="送出">
+        
+        </form>
        
         <button><p>Resume</p></button>
         <br>
         <a href="myform.html">連結至表單</a>
+        <hr>
+        ig
         
-    </section>
+        
+
+    </div>
 </body>
 
 </html>
