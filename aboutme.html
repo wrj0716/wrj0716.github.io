@@ -3,42 +3,66 @@
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Sandy">
-    <meta name="description" content="這是一個關於 我的網頁。">
-<meta name="keywords" content="html, meta, 標籤, 元數據">
-    <link rel="icon" href="1701778203.ico" type="image/x-icon"/>
+    <meta name="description" content="這是我HTML、CSS的專案作品的網頁。">
+<meta name="keywords" content="html, meta, 標籤, CSS">
+    <link rel="icon" href="logo.png" type="image/x-icon"/>
 
-    <title>MyResume</title>
+    <title>Hi This's Sandy's project</title>
+    <link rel="stylesheet" href="aboutme.css">
 </head>
 
 <body>
-    <div>
-        <p><a href="#a">About</a>
-        <a href="#b">Details</a>
-        <a href="#c">Educate</a>
-        <a href="#d">Experience</a>
-        <a href="#e">Skill</a>
-        <a href="#f">Personal Portfolio</a></p>
-    
-
-        <img src="S__47767563.jpg" height="200">
+    <div class="container">
+        
+        <ul class="navigation-menu">
+            <li class="navigation-menu-item"><a href="#a">關於我About</a></li>
+            <li class="navigation-menu-item"><a href="#b">個人資料Details</a></li>
+            <li class="navigation-menu-item"><a href="#c">個人學歷Educate</a></li>
+            <li class="navigation-menu-item"> <a href="#d">工作經歷Experience</a></li>
+            <li class="navigation-menu-item"><a href="#e">工作技能及證照Skill</a></li>
+            <li class="navigation-menu-item"><a href="#f">個人作品Personal Portfolio</a></li>
+        </ul>
+        
+        <img src="myphoto.jpg">
         <h1>Sandy Wu</h1>
-        <p>Position Desired<br>-UI/UX Engineer</p>
+        <p>Position Desired<br>-前端工程師</p>
  
     <hr>
  
-        <div id="a"><p>Hello, Im Sandy Wu,live in Taoyuan, work at Taoyuan Airport.<br>
-        My hobbie is go to gym and do some workout, I would like to be a muscle girl.<br>
-        And I trying to learn some html class at LCC, wish I will be a good engineer one day.</p></div>
+        <p id="a">
+            哈囉，我是吳睿家 Sandy Wu，出生於台灣桃園地區，目前於桃園機場就職。我的興趣是健身，擅長增肌減脂以及健美專項，曾任職於健身房擔任過私人教練。對於餐飲相關技能也有涉略，擁有中餐、西餐、烘焙、飲調、餐服、房務..相關丙級證照；喜歡學習，致力於汲取新知，目前正在學習HTML、CSS、JavaScript，前端工程師所應具備之技能。未來希望能為企業貢獻，協助每位使用者擁有更棒的體驗。
+            <br>
+            Hello, Im Sandy Wu,live in Taoyuan, work at Taoyuan Airport.
+            My hobbie is fitness and bodybuilding,I have worked in a gym as a personal trainer. I'm also familiar with catering-related skills, and has Class C certificates related to Chinese food, Western food, baking, catering, catering, housekeeping, etc.
+            And likes to learn new knowledge. I am also learning HTML, CSS, and JavaScript at LCC. In the future, I hope to contribute to the enterprise and help every user have a better experience.
+        </p>
    
     <hr>
         <h2 id="b">Details</h2>
-    <ul>
-        <li><b>Age:</b> 25 years old</li>
-        <li><b>Gender:</b> female</li>
-        <li><b>Country:</b> Taoyuan</li>
-        <li><b>Tel:</b> 0979-171-072</li>
-        <li><b>Email :</b><a href="#">a0979171072@gmail.com</a></li>
-    </ul>
+       
+        <table>
+          <tr>
+            <th align="left">Age:</th>
+            <td>25 years old</td>
+          </tr>
+          <tr>
+            <th align="left">Gender:</th>
+            <td>female</td>
+          </tr>
+          <tr>
+            <th align="left">Country:</th>
+            <td>Taoyuan</td>
+            </tr>
+            <tr>
+                <th align="left">Tel:</th>
+                <td>0979-171-072</td>
+            </tr>
+            <tr>
+                <th align="left">Email:</th>
+                <td><a href="mailto:a0979171072@gmail.com">a0979171072@gmail.com</a></td>
+            </tr>
+        </table>
+
         <h2 id="c">Educate</h2>
     <ul>
         <li><b>Associate Degree</b><br>-TransWorld University</li>
@@ -64,10 +88,14 @@
     </ul>
     
         <h2 id="f">Personal Portfolio </h2>
+   
+        <button><a href="myform.html">From表單作品</a></button>
+        <button><a href="hello.html">HTML架構作品</a></button>
+        <button><a href="index.html">Table表格作品</a></button>
+        <br><br>
         
-<!--        #video用法練習#controls=影片控制條 autoplay=自動撥放 loop=結束後循環撥放 muted=靜音 poster=相片頁-->
-        <video  width="400" height="400" controls  loop muted poster="https://images.pexels.com/photos/14251880/pexels-photo-14251880.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
-            <source src="https://player.vimeo.com/progressive_redirect/playback/888314389/rendition/360p/file.mp4?loc=external&oauth2_token_id=1747418641&signature=ad69e9ec72deced4319e36c5db9d57dabf1ce3dd38d45190c4e2b53f826b9ebf" type="video/mp4">
+        <video width="300" controls autoplay loop muted>
+            <source src="gym.mp4" type="video/mp4">
             <p>您的瀏覽器不支援影片</p>
         </video>
         <br>
@@ -90,16 +118,11 @@
             <input type="submit" value="送出">
         
         </form>
-       
-        <button><p>Resume</p></button>
-        <br>
-        <a href="myform.html">連結至表單</a>
-        <hr>
-        ig
-        
-        
-
     </div>
 </body>
-
+<footer>
+    <a href="https://wrj0716.github.io/"><img src="logogithub.png" height="200">wrj0716.github.io</a>
+    <a href="https://www.instagram.com/wrj0716/"><img src="logoig.png" height="200">@wrj0716 </a>
+    <a href="mailto:a0979171072@gmail.com"><img src="logomail.png" height="200">a0979171072@gmail.com </a>
+</footer>
 </html>
