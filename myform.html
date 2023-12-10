@@ -64,11 +64,11 @@
             <br><br>
             <label>喜歡的電影類型</label>
             <select name="movie">
-                <option id="movie5" > </option>
-                <option id="movie1">恐怖</option>
-                <option id="movie2">搞笑</option>
-                <option id="movie3">科幻</option>
-                <option id="movie4">動作</option>
+                <option value="movie5" > </option>
+                <option value="movie1">恐怖</option>
+                <option value="movie2">搞笑</option>
+                <option value="movie3">科幻</option>
+                <option value="movie4">動作</option>
             </select>
             <br>
             
@@ -80,19 +80,42 @@
     
         <fieldset>
         <legend>註冊資料</legend>
-            <label for="usermail">電子信箱</label>
-            <input type="email"  id="usermail" name="usermail" required>
+            <label for="usermail2">電子信箱</label>
+            <input type="email"  id="usermail2" name="usermail2" required>
             <br> <br>
-            <label for="userpassword">密碼</label>
-            <input type="password" id="userpassword" name="userpassword" required>
+            <label for="userpassword2">密碼</label>
+            <input type="password" id="userpassword2" name="userpassword2" required>
             <br> <br>
-            <label for="userconfirm">確認密碼</label>
-            <input type="password" id="userconfirm" name="userconfirm" required>
+            <label for="userconfirm2">確認密碼</label>
+            <input type="password" id="userconfirm2" name="userconfirm2" required>
             <br> <br>
-            <label for="userurl">網址</label>
-            <input type="url"  id="userurl" name="userurl" required>
-            <br> <br>
+            <label for="userurl2">網址</label>
+            <input type="url"  id="userurl2" name="userurl2" required>
             
+        </fieldset>
+        <br> <br>
+<!-- 用table表格較整齊-->
+        <fieldset>
+            <legend>註冊資料<sup>2</sup> </legend>
+            <table>
+            <tr>
+                <th align="left"><label for="usermail">電子信箱</label></th>
+                <td><input type="text" id="usermail" name="usermail" required></td>
+            </tr>
+            <tr>
+                <th align="left"><label for="userpassword">密碼</label></th>
+                <td><input type="password" id="userpassword" name="userpassword" required></td>
+            </tr>
+            <tr>
+                <th align="left"><label for="userconfirm">確認密碼</label></th>
+                <td><input type="password" id="userconfirm" name="userconfirm" required>
+</td>
+            </tr>
+            <tr>
+                <th align="left"><label for="userurl">網址</label></th>
+                <td><input type="url"  id="userurl" name="userurl" required></td>
+            </tr>
+        </table>
         </fieldset>
         <br>
         <input type="submit" value="確認">

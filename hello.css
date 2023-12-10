@@ -1,4 +1,12 @@
-h2{color: aqua;
-font-size: 60;
+img{padding: 50px;   
 }
-.sec{color:red}
+table{
+    font-size: 30px;
+    margin: 40px;
+}
+blockquote{
+    font-size: 20px;
+}
+figcaption{
+    margin: 1px;
+}
