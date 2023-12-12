@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <div class="container">
-        
+    
+    <nav class="nav1">   
         <ul class="navigation-menu">
             <li class="navigation-menu-item"><a href="#a">關於我About</a></li>
             <li class="navigation-menu-item"><a href="#b">個人資料Details</a></li>
@@ -21,8 +21,10 @@
             <li class="navigation-menu-item"><a href="#e">工作技能及證照Skill</a></li>
             <li class="navigation-menu-item"><a href="#f">個人作品Personal Portfolio</a></li>
         </ul>
+    </nav> 
+    <div class="container">
         
-        <img src="myphoto.jpg">
+        <img class="myphoto" src="myphoto.jpg">
         <h1>Sandy Wu</h1>
         <p>Position Desired<br>-前端工程師</p>
  
@@ -61,14 +63,7 @@
                 <td><a href="mailto:a0979171072@gmail.com">a0979171072@gmail.com</a></td>
             </tr>
         </table>
-
-        <h2 id="c">Educate</h2>
-    <ul>
-        <li><b>Associate Degree</b><br>-TransWorld University</li>
-        <li><b>High School Degree</b><br>-Yung Ping Technological Senior High School</li>
-        <li><b>Junior High School</b><br>-Dong An Junior High School</li>
-        <li><b>Elementary school</b><br>-Dong An Elementary school</li></ul>
-   
+        
         <h2 id="d">Experience</h2>
     <ul>
         <li>Gymmars Personal Tranner</li>
@@ -77,6 +72,13 @@
         <li>Wowprime Corp.Tokiya - Kitchen Assistant</li>
     </ul>
     
+
+        <h2 id="c">Educate</h2>
+    <ul>
+        <li><b>Associate Degree</b><br>-TransWorld University</li>
+        <li><b>High School Degree</b><br>-Yung Ping Technological Senior High School</li>
+   
+    </ul>
     
         <h2 id="e">Skill</h2>
     <ul>
@@ -88,7 +90,7 @@
     
         <h2 id="f">Personal Portfolio </h2>
    
-        <button><a href="myform.html">From表單作品</a></button>
+        <button><a href="myform.html">Form表單作品</a></button>
         <button><a href="hello.html">HTML架構作品</a></button>
         <button><a href="index.html">Table表格作品</a></button>
         <br><br>
@@ -100,28 +102,28 @@
         <br>
         
         <form>
-            <strong>聯絡我</strong>
+            <h3>聯絡我 <span style="font-size: 12px;"><sup>&#8727;</sup>indicates required</span></h3>
             <br>
-            <label>Email Address</label>
+            
+            <label>Email Address <sup>&#8727;</sup></label>
             <br>
-                <input type="email" id="usermail" name="usermail" size="60" required>
+                <input type="email" id="usermail" name="usermail" size="40" required>
             <br><br>
-            <label>姓名或暱稱</label>
+            <label>姓名或暱稱 <sup>&#8727;</sup></label>
             <br>
-                <input type="text" id="username" name="username" size="60" required>
+                <input type="text" id="username" name="username" size="40" required>
             <br><br>
-            <label>您的網址</label>
+            <label>您的網址 <sup>&#8727;</sup></label>
             <br>
-                <input type="url" id="userurl" name="userurl" size="60" required>
+                <input type="url" id="userurl" name="userurl" size="40" required>
             <br><br>
             <input type="submit" value="送出">
-        
         </form>
     </div>
 </body>
 <footer>
-    <a href="https://wrj0716.github.io/"><img src="logogithub.png" height="200">wrj0716.github.io</a>
-    <a href="https://www.instagram.com/wrj0716/"><img src="logoig.png" height="200">@wrj0716 </a>
-    <a href="mailto:a0979171072@gmail.com"><img src="logomail.png" height="200">a0979171072@gmail.com </a>
+    <a class="imggithub" href="https://wrj0716.github.io/"><img src="logogithub.png" height="200">wrj0716.github.io</a>
+    <a class="imgig" href="https://www.instagram.com/wrj0716/"><img src="logoig.png" height="200">@wrj0716 </a>
+    <a class="imgmail" href="mailto:a0979171072@gmail.com"><img src="logomail.png" height="200">a0979171072@gmail.com </a>
 </footer>
 </html>
