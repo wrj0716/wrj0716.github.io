@@ -1,6 +1,5 @@
 body{
     margin: 0;
-    
 }
 /*主內容*/
 .container{
@@ -19,16 +18,20 @@ a {
 /*NAV的ul*/
 .navigation-menu{
     list-style: none;
-    padding:0;
+    font-size: 15px;
+    padding:90;
     margin: 0 0 10px 0;
-    background-color: gainsboro;
+    background-color: white ;
+    box-shadow:5px 5px 10px gainsboro;
+    
 }
 /*nav的li*/
 .navigation-menu-item{
    display: inline-block;
    border-right:1px solid white;
-    padding: 5px;
+    padding: 15px;
 }
+
 /*li的超連結*/
 li a:hover{
     color: purple;
