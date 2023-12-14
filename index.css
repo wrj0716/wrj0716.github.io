@@ -22,6 +22,7 @@ a {
     padding:90;
     margin: 0 0 10px 0;
     background-color: white ;
+/* shadow水平.垂直.模糊.顏色*/
     box-shadow:5px 5px 10px gainsboro;
     
 }
@@ -32,6 +33,7 @@ a {
     padding: 15px;
 }
 
+
 /*li的超連結*/
 li a:hover{
     color: purple;
@@ -39,8 +41,17 @@ li a:hover{
 /*照片變圓形*/
 .myphoto{
     border-radius: 50%;
+    padding: 10px;
+    border:50px solid gray;
+}
+.myname{
+     position: relative;
+    left: 600px;
+  bottom: 450px;
+/*    padding: 0 0 0px 650px;*/
 }
 
+/*字型*/
 p{font-family: 'Noto Sans TC', sans-serif;}
 h1,h2{font-family: 'Afacad', sans-serif;
 }
