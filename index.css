@@ -1,86 +1,130 @@
-body{
+body {
     margin: 0;
 }
+
 /*主內容*/
-.container{
+.container {
     width: 900px;
     margin: 80px auto;
     font-size: 25px;
-    line-height:150%;
+    line-height: 150%;
     word-spacing: 3px;
-    
-    
+
+
 }
+
 /*所有超連結*/
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 /*NAV的ul*/
-.navigation-menu{
+.navigation-menu {
     list-style: none;
     font-size: 15px;
-    padding:90;
+    padding: 90;
     margin: 0 0 10px 0;
-    background-color: white ;
-/* shadow水平.垂直.模糊.顏色*/
-    box-shadow:5px 5px 10px gainsboro;
-    
+    background-color: white;
+    /* shadow水平.垂直.模糊.顏色*/
+    box-shadow: 5px 5px 10px gainsboro;
+
 }
+
 /*nav的li*/
-.navigation-menu-item{
-   display: inline-block;
-   border-right:1px solid white;
+.navigation-menu-item {
+    display: inline-block;
+    border-right: 1px solid white;
     padding: 15px;
 }
 
 
 /*li的超連結*/
-li a:hover{
+li a:hover {
     color: purple;
 }
+
 /*照片變圓形*/
-.myphoto{
+.myphoto {
     border-radius: 50%;
     padding: 10px;
-    border:50px solid gray;
+    position:absolute;
+    right: 10px;
+    border: 50px solid gray;
 }
-.myname{
-     position: relative;
+
+.middle-about,.middle-details,.middle-details,.middle-experience,.middle-educate,.middle-skill,.middle-personalPortfolio{
+    width: 600px;
+    margin: 80px auto;
+}
+
+
+.myname {
+    background-color: bisque;
+    position: relative;
     left: 600px;
-  bottom: 450px;
-/*    padding: 0 0 0px 650px;*/
+    bottom: 450px;
+}
+.top{
+    background-size: 115%;
+    background-image: url("pexels-flo-dahm-458917.jpg")
 }
 
 /*字型*/
-p{font-family: 'Noto Sans TC', sans-serif;}
-h1,h2{font-family: 'Afacad', sans-serif;
+p {
+    font-family: 'Noto Sans TC', sans-serif;
 }
-li{font-family: 'Afacad', sans-serif;
-font-family: 'Noto Sans TC', sans-serif;
-font-family: 'Roboto Condensed', sans-serif;}
-table{font-family: 'Afacad', sans-serif;
-font-family: 'Noto Sans TC', sans-serif;
-font-family: 'Roboto Condensed', sans-serif;}
+
+h1,
+h2 {
+    font-family: 'Afacad', sans-serif;
+}
+
+li {
+    font-family: 'Afacad', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+table {
+    font-family: 'Afacad', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
 
 
 
-form{
+form {
     font-size: 20px;
-    background-color:gainsboro;
+    background-color: gainsboro;
 }
-sup{
+
+sup {
     color: red;
 }
-footer{
-    padding:0 30px 0 60px; 
+
+footer {
+    padding: 0 30px 0 60px;
     border-top: 2px solid gray;
 }
-footer img{
+
+footer img {
     height: 100px;
     vertical-align: middle;
-    
+
 }
 
-.imggithub{margin: 60px;}
-.imgig{margin: 60px;}
-.imgmail{margin: 60px;}
+.imggithub {
+    margin: 60px;
+}
+
+.imgig {
+    margin: 60px;
+}
+
+.imgmail {
+    margin: 60px;
+}
+
+bgi{
+    color: red;
+}
