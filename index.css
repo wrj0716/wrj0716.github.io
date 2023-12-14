@@ -5,7 +5,7 @@ body {
 /*主內容*/
 .container {
     width: 900px;
-    margin: 80px auto;
+    margin: 1px auto;
     font-size: 25px;
     line-height: 150%;
     word-spacing: 3px;
@@ -45,28 +45,53 @@ li a:hover {
 
 /*照片變圓形*/
 .myphoto {
-    border-radius: 50%;
-    padding: 10px;
-    position:absolute;
-    right: 10px;
-    border: 50px solid gray;
+    border-radius: 0%;
+    padding: 0px;
+    margin: 8px;
+    border: 10px solid white;
+    position:relative;
+    bottom:-50px;
+    left:30px;
 }
 
 .middle-about,.middle-details,.middle-details,.middle-experience,.middle-educate,.middle-skill,.middle-personalPortfolio{
-    width: 600px;
-    margin: 80px auto;
+    width: 500px;
+    margin: 10px auto;
 }
 
-
+h1,#h1{
+    color: rgb(255, 250, 250);
+    position:relative;
+    bottom: 80px;
+    left:520px;
+}
+/*
 .myname {
     background-color: bisque;
-    position: relative;
-    left: 600px;
-    bottom: 450px;
+    position:relative;
+    bottom: 380px;
+    left:490px;
 }
+*/
+blockquote{
+    color: white;
+    font-style:oblique;
+    position: relative;
+    bottom: 450px;
+    left: 460px;
+    border-left: 3px solid white;
+    padding-left:7px;
+   
+}
+.middle-about{
+    position: relative;
+    bottom: 00px;
+    left: 0px;
+}
+
 .top{
-    background-size: 115%;
-    background-image: url("pexels-flo-dahm-458917.jpg")
+    background-size:  107%;
+    background-image: url("20180716-59.jpg")
 }
 
 /*字型*/
@@ -125,6 +150,3 @@ footer img {
     margin: 60px;
 }
 
-bgi{
-    color: red;
-}
