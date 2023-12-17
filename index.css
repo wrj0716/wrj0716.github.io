@@ -5,7 +5,7 @@ body {
 /*主內容*/
 .container {
     width: 900px;
-    margin: 1px auto;
+    margin: 0 auto;
     font-size: 25px;
     line-height: 150%;
     word-spacing: 3px;
@@ -22,8 +22,7 @@ a {
 .navigation-menu {
     list-style: none;
     font-size: 15px;
-    padding: 90;
-    margin: 0 0 10px 0;
+    margin: 0 0 3px 0;
     background-color: white;
     /* shadow水平.垂直.模糊.顏色*/
     box-shadow: 5px 5px 10px gainsboro;
@@ -42,50 +41,181 @@ a {
 li a:hover {
     color: purple;
 }
-
-/*照片變圓形*/
-.myphoto {
-    margin: px;
-    border: 10px solid white;
-    position:relative;
-    bottom:-5px;
-    left:30px;
+.Info-me{
+    height: 500px;
+    background-image: url("20180716-59.jpg")
+}
+.myphoto{
+    width: 300px;
+    border-radius: 50%;
+}
+.Info-me-title{
+    position: relative;
+    top:40px;
+    left:50px;
+}
+/*定位會跑掉*/
+.Info-me-word{
+    position: absolute;
+    right: 600px;
+    bottom: 600px;
+}
+.Info-me-word2{
+    position: absolute;
+    left: 750px;
+    bottom: 450px;
 }
 
-.top2{
-    width: 490px;
-    margin: 0 auto;
-}
-
-h1,#h1{
-position:relative;
-    bottom: 15px;
-    left:25px;   
-}
- 
 .blockquote-chinese{
     color: white;
     font-style:oblique;
-    position: relative;
-    bottom: 400px;
-    left: 260px;
     border-left: 3px solid white;
-    padding-left:7px;
+    padding-left: 3px;
 }
 .blockquote-english{
-    font-size: 20px;
+    width: 550px;
     color: white;
     font-style:oblique;
+}
+.middle-about{
+    background-color: gainsboro;
     position: relative;
-    bottom: 400px;
-    left: 230px;
+}
+.middle-about-chinese{
+    width: 400px;
+    border-right: 2px solid white;
+    box-sizing: border-box;
+    padding: 25px;
+    
+}
+.middle-about-en{
+    width: 500px;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 25px;
+    top:0px;
+    right:0px;
+}
+.middle-menu{
+    height: 650px;
+    background-color:#C0C0C0;
+    position: relative;
+     
+    
+}
+.middle-menu-details{
+    width: 370px;
+    height:300px;
+    background-color:gainsboro;
+    position:absolute;
+    top:3px;
+    left:3px;
+    padding: 0 0 5px 5px;
+    box-shadow: 2px 2px 5px #696969;
+}
+.middle-menu-experience{
+    width: 500px;
+    height:300px;
+    background-color: gainsboro;
+    position:absolute;
+    top:3px;
+    right:2px;
+    box-shadow: 2px 2px 5px #696969;
+}
+.middle-menu-educate{
+    width: 500px;
+    height:300px;
+    background-color: gainsboro;
+    position:absolute;
+    bottom: 3px;
+    right: 2px;
+    box-shadow: 2px 2px 5px #696969;
+}
+
+.middle-menu-skill{
+    width: 370px;
+    height:300px;
+    background-color: gainsboro;
+    position:absolute;
+    bottom: 3px;
+    left: 3px;
+    padding: 0 0 0 5px;
+    box-shadow: 2px 2px 5px #696969 ;
+}
+.middle-personalportfolio{
+    background-color: white;
+}
+h2{
+    text-align:center;
+}
+.middle-personalportfolio-menu{
+    background-color: ghostwhite;
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+/*    這裡*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.personalportfolio-menu-form{
+    width: 200px;
+    height: 250px;
+/*    border: 1px solid #ccc;*/
+}
+.form-photo{
+    width: 100%;
+/*    border-bottom:1px solid #ccc;*/
+    
+}
+
+.personalportfolio-menu-hello{
+  
+  width: 200px;
+  height: 250px;
+/*  border: 1px solid #ccc;*/
+}
+.html-photo{
+  width: 100%;
+/*   border-bottom:1px solid #ccc;*/
 }
 
 
-.top{
-    background-size:  107%;
-    background-image: url("20180716-59.jpg")
+.personalportfolio-menu-table{
+    width: 200px;
+    height: 250px;
+/*    border: 1px solid #ccc;*/
 }
+
+.table-photo{
+    width: 100%;
+/*     border-bottom:1px solid #ccc;*/
+}
+
+
+.Myvideo{
+    height: 1200px;
+   margin:20px;
+   background-color:#333333;
+
+}
+.Myvideo-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+
+
+
+
+
+/
 /*字型*/
 p {
     font-family: 'Noto Sans TC', sans-serif;
@@ -109,37 +239,25 @@ table {
 }
 
 
-.middle-about,.middle-details,.middle-experience,.middle-educate,.middle-skill,.middle-personalPortfolio{
+
+
+
+
+
+
+
+
+
+
+.form{
     background-color: gainsboro;
-    position: relative;
-    bottom: 260px;
-    border-top:3px solid darkgray;  
-    padding:20px 220px 50px 220px;
 }
-
-.middle-details,.middle-details,.middle-experience,.middle-educate,.middle-skill,.middle-personalPortfolio{
-    width: 450px;
-    
-    font-size: 20px;
-    background-color: darkgray;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 form {
+    width: 400px;
+    margin: 0 auto;
     font-size: 20px;
-    background-color: gainsboro;
+    
 }
 
 sup {
