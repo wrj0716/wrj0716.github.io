@@ -57,13 +57,13 @@ li a:hover {
 /*定位會跑掉*/
 .Info-me-word{
     position: absolute;
-    right: 600px;
-    bottom: 600px;
+    right: 220px;
+    bottom: 320px;
 }
 .Info-me-word2{
     position: absolute;
-    left: 750px;
-    bottom: 450px;
+    left: 200px;
+    bottom: 320px;
 }
 
 .blockquote-chinese{
