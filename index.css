@@ -42,28 +42,30 @@ li a:hover {
     color: purple;
 }
 .Info-me{
+
     height: 500px;
     background-image: url("20180716-59.jpg")
 }
 .myphoto{
-    width: 300px;
+    width: 250px;
     border-radius: 50%;
+    border: 1px solid white; 
 }
 .Info-me-title{
     position: relative;
-    top:40px;
+    top:20px;
     left:50px;
 }
 /*定位會跑掉*/
 .Info-me-word{
     position: absolute;
-    right: 220px;
-    bottom: 320px;
+    right: 600px;
+    bottom: 600px;
 }
 .Info-me-word2{
     position: absolute;
-    left: 200px;
-    bottom: 320px;
+    left: 750px;
+    bottom: 450px;
 }
 
 .blockquote-chinese{
@@ -83,7 +85,7 @@ li a:hover {
 }
 .middle-about-chinese{
     width: 400px;
-    border-right: 2px solid white;
+    border-right: 1px solid white;
     box-sizing: border-box;
     padding: 25px;
     
@@ -151,7 +153,7 @@ h2{
 .middle-personalportfolio-menu{
     background-color: ghostwhite;
     width: 90%;
-    height: 300px;
+    height: 350px;
     margin: 0 auto;
 /*    這裡*/
     display: flex;
@@ -202,6 +204,7 @@ h2{
    background-color:#333333;
 
 }
+
 .Myvideo-menu{
     display: flex;
     flex-direction: column;
@@ -209,7 +212,9 @@ h2{
     justify-content: space-evenly;
 
 }
-
+.Myvideo-menu-title,.Myvideo-menu-title2{
+    color: aliceblue;
+}
 
 
 
@@ -265,8 +270,9 @@ sup {
 }
 
 footer {
-    padding: 0 30px 0 60px;
     border-top: 2px solid gray;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 footer img {
@@ -276,14 +282,14 @@ footer img {
 }
 
 .imggithub {
-    margin: 60px;
+    margin:10px
 }
 
 .imgig {
-    margin: 60px;
+    margin: 10px;
 }
 
 .imgmail {
-    margin: 60px;
+    margin: 10px;
 }
 
