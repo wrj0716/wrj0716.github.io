@@ -10,42 +10,47 @@ body {
     line-height: 150%;
     word-spacing: 3px;
 
-
 }
 
 /*所有超連結*/
 a {
     text-decoration: none;
+    color:black;
 }
-
-/*NAV的ul*/
-.navigation-menu {
-    list-style: none;
-    font-size: 15px;
-    margin: 0 0 3px 0;
-    background-color: white;
-    /* shadow水平.垂直.模糊.顏色*/
+.navigation-menu{
+  background:white;
+  list-style:none;
+  padding:0;
+  overflow:hidden;
+    font-size: 18px;
     box-shadow: 5px 5px 10px gainsboro;
-
+    margin: 0 0 3px 0;
+    position: fixed;
+    z-index: 8;
 }
-
-/*nav的li*/
-.navigation-menu-item {
-    display: inline-block;
-    border-right: 1px solid white;
-    padding: 15px;
+.navigation-menu-item{
+  float:left;
+  
+  border-right:1px solid white;
+  padding:15px 25px 15px 25px;
 }
-
+li a{
+  
+  display:block;
+  color:black;
+}
 
 /*li的超連結*/
 li a:hover {
+
     color: purple;
 }
 .Info-me{
-
+    
+    position: relative;
     height: 500px;
     background-image: url("20180716-59.jpg")
-}
+   }
 .myphoto{
     width: 250px;
     border-radius: 50%;
@@ -53,19 +58,19 @@ li a:hover {
 }
 .Info-me-title{
     position: relative;
-    top:20px;
+    top:10px;
     left:50px;
 }
 /*定位會跑掉*/
 .Info-me-word{
     position: absolute;
-    right: 600px;
-    bottom: 600px;
+    right: 120px;
+    top: 30px;
 }
 .Info-me-word2{
     position: absolute;
-    left: 750px;
-    bottom: 450px;
+    right: -30px;
+    bottom: 220px;
 }
 
 .blockquote-chinese{
@@ -196,7 +201,9 @@ h2{
     width: 100%;
 /*     border-bottom:1px solid #ccc;*/
 }
-
+.middle-personalportfolio-menu{
+    text-align:center;
+}
 
 .Myvideo{
     height: 1200px;
