@@ -1,6 +1,8 @@
+/*
  http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
+*/
  
 
 html, body, div, span, applet, object, iframe,
@@ -66,13 +68,14 @@ a {
     color:black;
 }
 .navigation-menu{
+    width: 100%;
   background:white;
   list-style:none;
   padding:0;
   overflow:hidden;
-    font-size: 18px;
+    font-size: 15px;
     box-shadow: 5px 5px 10px gainsboro;
-    margin: 0 0 3px 0;
+    margin: 0;
     position: fixed;
     z-index: 8;
 }
@@ -80,7 +83,7 @@ a {
   float:left;
   
   border-right:1px solid white;
-  padding:15px 25px 15px 25px;
+  padding:15px;
 }
 li a{
   
