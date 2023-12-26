@@ -140,22 +140,69 @@
 //    }
 //}
 //alert(score);
-
-var number = [
-    [1,2,3],
-    [4,5,6],
-    [7,8,9],
-    [0]
-];
-
-for(var i=0;i<number.length;i++){
-    for(var j=0;j<number[i].length;j++){
-        document.write(number[i][j]);
-    }
-    
-    document.write("<br>");
-}
+//
+//var number = [
+//    [1,2,3],
+//    [4,5,6],
+//    [7,8,9],
+//    [0]
+//];
+//
+//for(var i=0;i<number.length;i++){
+//    for(var j=0;j<number[i].length;j++){
+//        document.write(number[i][j]);
+//    }
+//    
+//    document.write("<br>");
+//}
 //for(var i=0;i<number.length;i++){
 //    document.write(number[i]);
 //     document.write("<br>");
+//}
+
+//var countryCode = "tw"; 
+//var msg = ""; 
+//if(countryCode == "tw"){ 
+//    msg = "您好"; 
+//}else{ 
+//    msg = "how are you"; 
+//}
+
+//第一題
+//document.write("第一題");
+//document.write("<br>");
+//for(var i=0; i<=30;i++){
+//    if(i%2==0){
+//        document.write(i);
+//        document.write("<br>");
+//    }
+//}
+//
+//document.write("第二題");
+//document.write("<br>");
+//for(var i=0; i<=30;i++){
+//    if(i%2==0 && i%3!=0){
+//        document.write(i);
+//        document.write("<br>");
+//    }
+//}
+
+//document.write("第三題");
+//document.write("<br>");
+//var j=0;
+//while(j<30){
+//    j++;
+// if(j%2){
+//    document.write(j+"<br>");
+//}
+//}
+//
+//document.write("第四題");
+//document.write("<br>");
+//var j = 0;
+//while(j<30){
+//    j++;
+// if(j%2 && j%5!=0){
+//    document.write(j+"<br>");
+//}
 //}
