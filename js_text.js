@@ -169,14 +169,19 @@
 //}
 
 //第一題
-//document.write("第一題");
-//document.write("<br>");
-//for(var i=0; i<=30;i++){
-//    if(i%2==0){
-//        document.write(i);
-//        document.write("<br>");
-//    }
-//}
+document.write("第一題");
+ 
+document.write("<br>");
+function H1(){
+    var H1 = document.getElementById("number");
+
+for(var i=0; i<=30;i++){
+    if(i%2==0){
+        document.write(i);
+        document.write("<br>");
+    }
+}
+}
 //
 //document.write("第二題");
 //document.write("<br>");
@@ -206,3 +211,5 @@
 //    document.write(j+"<br>");
 //}
 //}
+var H1 = document.getElementById("h1");
+console.log(H1);
