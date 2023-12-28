@@ -169,19 +169,66 @@
 //}
 
 //第一題
-document.write("第一題");
- 
-document.write("<br>");
-function H1(){
-    var H1 = document.getElementById("number");
+//function bt_click(click){
+////    alert("hi");
+//   click.innerHTML = "hihi";
+//    click.style.color = "red";
+//}
+//var milkPrice = x;
+//var milkNum = y;
+//function how_many(x,y){
+//    total= x*y;
+//    return total;
+//}
+//console.log(how_many(30,6));
+//document.write(how_many(30,6));
 
-for(var i=0; i<=30;i++){
-    if(i%2==0){
-        document.write(i);
-        document.write("<br>");
-    }
+
+var monyBag = 200; //錢包有200，買了每罐25元的飲料x7罐，
+
+function value1(iceBag,how_many_ice){
+    total=iceBag * how_many_ice;
+    return total;
 }
+var ice_total = value1(25,7);
+//var totalMoney = monyBag-ice_total;
+//document.write(ice_total);
+if(monyBag>=ice_total){
+    monyBag=monyBag-ice_total;
+    document.write("小美剩下" + monyBag + "元" );
+
+}else{
+    document.write("$$不夠");
 }
+
+//var hamburgerPrice = 50;
+//var cokePrice = 30;
+//var moneyBag = 180;
+//
+//var total = moneyBag - cokePrice*2 - hamburgerPrice;
+
+
+
+//var BT = document.getElementById("btn");
+//BT.addEventListener("click",function(){
+//    this.innerText = "XXXXX";
+//})
+//
+//var H1 = document.getElementById("hi");
+//console.log(H1);
+//H1.style.color="red";
+//H1.innerHTML="多練習";
+//document.write("第一題");
+//document.write("<br>");
+//
+//
+//for(var i=0; i<=30;i++){
+//    if(i%2==0){
+//        document.write(i);
+//        document.write("<br>");
+//    }
+//}
+//}
 //
 //document.write("第二題");
 //document.write("<br>");
@@ -211,5 +258,4 @@ for(var i=0; i<=30;i++){
 //    document.write(j+"<br>");
 //}
 //}
-var H1 = document.getElementById("h1");
-console.log(H1);
+
