@@ -17,3 +17,4 @@
     print $a;
     print strlen("ab");
 ?>
+<?php print "hellooooo"." "."good morning"; ?>
