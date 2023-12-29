@@ -191,8 +191,6 @@ function value1(iceBag,how_many_ice){
     return total;
 }
 var ice_total = value1(25,7);
-//var totalMoney = monyBag-ice_total;
-//document.write(ice_total);
 if(monyBag>=ice_total){
     monyBag=monyBag-ice_total;
     document.write("小美剩下" + monyBag + "元" );
