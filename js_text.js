@@ -184,20 +184,20 @@
 //document.write(how_many(30,6));
 
 
-var monyBag = 200; //錢包有200，買了每罐25元的飲料x7罐，
-
-function value1(iceBag,how_many_ice){
-    total=iceBag * how_many_ice;
-    return total;
-}
-var ice_total = value1(25,7);
-if(monyBag>=ice_total){
-    monyBag=monyBag-ice_total;
-    document.write("小美剩下" + monyBag + "元" );
-
-}else{
-    document.write("$$不夠");
-}
+//var monyBag = 200; //錢包有200，買了每罐25元的飲料x7罐，
+//
+//function value1(iceBag,how_many_ice){
+//    total=iceBag * how_many_ice;
+//    return total;
+//}
+//var ice_total = value1(25,7);
+//if(monyBag>=ice_total){
+//    monyBag=monyBag-ice_total;
+//    document.write("小美剩下" + monyBag + "元" );
+//
+//}else{
+//    document.write("$$不夠");
+//}
 
 //var hamburgerPrice = 50;
 //var cokePrice = 30;
