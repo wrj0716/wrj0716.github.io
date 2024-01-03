@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex練習(排版的聖品-block橫排)</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .wrap{
+            width: 960px;
+            margin: auto;
+            background-color: darkgrey;
+            display: flex;
+            flex-wrap: wrap;  
+/*        flex放父元素    flex werp =折行*/
+        }
+        .item{
+            width: 300px;
+            margin:10px;
+            background-color: cornsilk;
+        }
+        .container{
+            width: 960px;
+            margin: auto;
+            display: flex;
+        }
+        .iTem{
+            margin: 1px;
+             width: 100%;
+        }
+        .iTem img{
+            width: 100%;
+            vertical-align: bottom;
+        }
+
+        
+    </style>
+</head>
+<body>
+   <div class="wrap">
+       <div class="item">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, eaque saepe libero quam veniam, ab eligendi quisquam tenetur quis iusto illum dolores, mollitia velit officiis sed beatae animi, quod commodi?
+       </div>
+       <div class="item">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, eaque saepe libero quam veniam, ab eligendi quisquam tenetur quis iusto illum dolores, mollitia velit officiis sed beatae animi, quod commodi?
+       </div>
+       <div class="item">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, eaque saepe libero quam veniam, ab eligendi quisquam tenetur quis iusto illum dolores, mollitia velit officiis sed beatae animi, quod commodi?
+       </div>
+       <div class="item">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, eaque saepe libero quam veniam, ab eligendi quisquam tenetur quis iusto illum dolores, mollitia velit officiis sed beatae animi, quod commodi?
+       </div><div class="item">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, eaque saepe libero quam veniam, ab eligendi quisquam tenetur quis iusto illum dolores, mollitia velit officiis sed beatae animi, quod commodi?
+       </div>
+       
+   </div>
+   
+   <div class="container">
+       <div class="iTem">
+           <img src="https://fakeimg.pl/350x200/ff0000/000">
+       </div>
+       <div class="iTem">
+           <img src="https://fakeimg.pl/350x200/ff0000/000">
+       </div>
+   </div>
+   
+   <div class="container">
+       
+       <div class="iTem">
+           <img src="https://fakeimg.pl/350x200/ff0000/000">
+       </div>
+       <div class="iTem">
+           <img src="https://fakeimg.pl/350x200/ff0000/000">
+       </div>
+       <div class="iTem">
+           <img src="https://fakeimg.pl/350x200/ff0000/000">
+       </div>
+       
+   </div>
+   
+    
+</body>
+</html>
