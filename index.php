@@ -236,6 +236,9 @@
         </div>
     
     </footer>
+    <div class="copyright">
+        <p>Copyright&copy; By Sandy.</p>
+    </div>
 </body>
 
 </html>
