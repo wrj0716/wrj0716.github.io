@@ -1,288 +1,85 @@
 <!DOCTYPE html>
-<html lang="zh-tw">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    
-    <title>text</title>
-    <link rel="stylesheet" href="reset.css">    
+    <meta charset="UTF-8">
+    <title>Document</title>
     <style>
-        .header{
-            background-color: black;
-            display: flex;
-            
-        }
-        .header img{
-
-            width: 70px;
-        }
-        .header li{
+        .btn{
             display: inline-block;
-            margin: 0 15px;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            text-decoration:none;
+            transition: all 2s 0s ease;
+            border-radius: 5px;
         }
-        nav{
-            width: 100%;
-            line-height: 50px;
+        .btn:hover{
+            background-color: #f00;
+            color: gold;
+            padding: 10px 50px;
+        }
+        bottom{
+            background-color: #000;
+            color: aliceblue;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 1s;
+        }
+        bottom:hover{
+            background-color: #aaa;
+            padding: 10px 50px;
+        }
+        input{
+            background-color: #ffa;
+            transition: all 2s;
+        }
+        input:hover{
+            padding: 20px 50px;
+        }
+        .traiangle{
+            width: 0px;
+            height: 0px;
+            border: 25px solid;
+            border-color: transparent transparent transparent #f41;
+        }
+        .box{
+            width: 162px;
+            height: 160px;
+            border: 15px solid #0af;
+           position: relative;
+            left: 20px;
+        }
+        img{
+            border: 1px solid #0af;
+            position: absolute;
+            top:20px;
+            left: 30px;
+        }
+        img:hover{
+            box-shadow: -2px 2px 15px #0af;
         }
         
-       
-        li a{
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
+        .animation{
+            width: 200px;
+            height: 200px;
+            background-color: #d0f;
+            border-radius: 50%;
+            animation: ball .5s 2s infinite alternate ;
+            動畫名稱 撥放時間 延遲執行時間 速度 次數 方向 填充模式 撥放狀態;
         }
-        .nav_right{
-            float: right;
-/*            !!!!!!!!!!!!!!!!!*/
-        }
-        li a:hover{
-            background-color: crimson;
-        }
-        .warp{
-            background-image: url("https://picsum.photos/1400/400?random=2");
-        }
-        .warp img{
-            
-        }
-        .title-text{
-            width: 500px;
-            height: 400px;
-            background-color: black;
-            color: white;
-            opacity: .8;
-            box-sizing: border-box;
-            line-height: 30px;
-            padding-top: 50px;
-        }
-        .title-text header,article{
-            width: 95%;
-            margin: auto;
-        }
-        .title-text h1{
-            font-size: 30px;
-        }
-        .title-text h3{
-            font-size: 13px;
-            color:forestgreen;
-        }
-        .text{
-            background: black;
-            display: flex;
-            padding: 5px 0 25px;
-            position: relative;
-        }
-        .text header{
-            color:aliceblue;
-            position: absolute;
-            top:-12px;
-        }
-        .text .text_item{
-            width: 100%;
-            margin: 1px;
-            text-align: center;
-          
-        }
-        .text img{
-            width: 100%;
-        }
-        .text a{
-            text-decoration: none;
-            color: white;
+        @keyframes ball{
+            0%{border-radius: 50%;}
+            100%{border-radius: 0%;}
         }
     </style>
 </head>
-
 <body>
-
-    <div>
-      <div class="header">
-        <img src="https://i.pcmag.com/imagery/reviews/05cItXL96l4LE9n02WfDR0h-5.fit_scale.size_760x427.v1582751026.png" >
-        <nav>
-           <ul>
-               <li><a href="#">首頁</a></li>
-               <li><a href="#">收藏</a></li>
-               <li><a href="#">下載</a></li>
-               
-               <li class="nav_right"><a href="#">搜尋</a></li>
-               <li class="nav_right"><a href="#">設定</a></li>
-               <li class="nav_right"><a href="#">個人資料</a></li>
-               
-           </ul>
-        </nav>
-       </div>
-        
-        <div class="warp">
-          
-          
-           <div class="title-text">
-               <header>
-                  <img src="https://miro.medium.com/v2/resize:fit:25/1*T0mzhD9sNVEP-4FWIOHxQg.png"> Netflex
-                   <h1>MONEY HEIST</h1>
-               </header>
-               <article>
-                   <h3>97% people likes!</h3>
-                   <strong>Watch Part 4 Now</strong>
-                   <p>Netflix 是什麼？ Netflix 是串流服務，透過數千種可連結網路的行動裝置，提供各種獲獎肯定的節目、電影、動畫、紀錄片等精彩內容。 只要支付一筆經濟實惠的月費，就能隨時 ...</p>
-               </article>
-           </div>
-        </div>
-
-        
     
-        <div class="text">
-           <header>Popular on Netflix</header>
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=1">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=11">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=2">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=3">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=14">
-                   <p>movie title</p>
-              </a>
-            </div>
-             
-             <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=5">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=6">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=7">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=18">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=8">
-                   <p>movie title</p>
-              </a>
-            </div>
-        </div>
-    
-        <div class="text">
-           <header>Recently Watched</header>
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=6">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=19">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=61">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=13">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=51">
-                   <p>movie title</p>
-              </a>
-            </div>
-             
-             <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=91">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=18">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=17">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=100">
-                   <p>movie title</p>
-              </a>
-            </div>
-            
-            <div class="text_item">
-              <a href="#">
-                  <img src="https://picsum.photos/150/200?random=71">
-                   <p>movie title</p>
-              </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    
-    <h1 id="hi">練習</h1>
-    <button id="btn" onclick="bt_click()">click me</button>
-    <br>
-    <script type="text/javascript" src="js_text.js"></script>
+    <a href="#" class="btn">送出</a>
+    <bottom>確認</bottom>
+    <input type="submit" value="送出囉">
+    <div class="traiangle"></div>
+    <div class="box"><img src="pic/logo.png"></div>
+    <div class="animation"></div>
 </body>
+</html>

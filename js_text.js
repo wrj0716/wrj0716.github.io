@@ -256,4 +256,60 @@
 //    document.write(j+"<br>");
 //}
 //}
+//var nuM=[
+//    [1,2,3],
+//    [4,5,6],
+//    [7,8,9],
+//    [0]
+//    
+//];
+//var n = nuM.length;
+//$n=count($nuM);  php用法
 
+// for(var i = 0; i < n; i++ ){
+//     for(var j = 0; j<nuM[i].length ; j++){
+//         document.write(nuM[i][j]);
+//         
+//     }document.write("<br>");
+// };
+//    for(var i = 0; i <n ; i++){
+//        document.write(nuM[i][0],
+//                       nuM[i][1],
+//                       nuM[i][2]
+//                       
+//                      
+//                      );
+//    }document.write("<br>");
+
+//var member=[
+//      [1,'Sandy','F'],
+//      [2,'Cofe','F'],
+//      [3,'Lucy','F'],
+//    ];
+//var n=member.length;
+//
+//for(var i = 0; i< n ; i++){
+//    for(var j = 0; j< member[i].length ; j++){
+//        document.write(member[i][j]);
+//    };
+//}
+//for(var i = 0; i< n ; i++){
+//    document.write(member[i][0],
+//                   member[i][1],
+//                   member[i][2]
+//                  );
+//}document.write("<br>");
+
+var phone1 ={
+    number:"123",
+    years:"2020",
+    is_proof:true,
+    age(){
+        
+        return 2021-this.years;
+    }
+}
+
+class Phone{
+    
+}

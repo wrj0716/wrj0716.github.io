@@ -1,0 +1,178 @@
+.nav_bar{
+    background-color: #000;
+    display: flex;
+    width: 100%;
+    box-shadow: 1px 0 10px gray;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+nav{
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+nav a:hover{
+    color: #f70;
+}
+nav a{
+    text-decoration: none;
+    margin: 10px;
+    color: #000;
+}
+.body{
+    width: 960px;
+    margin: auto;
+    line-height: 30px;
+    padding-top: 40px;
+}
+a{
+    text-decoration: none;
+    color:#000;
+}
+a:hover{
+    color: #5B5B5B;
+}
+h1{
+    font-size: 30px;
+}
+h2{
+    font-size: 30px;
+}
+.H2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;;
+}
+
+
+/*網頁利用錨點連結導航時，導覽列遮住了標題怎麼辦1*/
+/*
+:target:before {
+content: "";
+display: block;
+height: 40px;
+}
+*/
+
+/*網頁利用錨點連結導航時，導覽列遮住了標題怎麼辦2*/
+:root {
+  scroll-padding-top:4rem;
+}
+
+.wrap{
+    height: 250px;
+    text-align: center;
+    padding: 50px;
+    background-image: url(https://picsum.photos/1000/400?grayscale);
+    position: relative;
+    color: #fff;
+}
+.wrap_img{
+    position: absolute;
+    left: 150px;
+}
+.wrap img{
+    border-radius: 50px;
+    vertical-align:middle;
+
+}
+
+.info_self{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+ 
+
+.infomation{
+    background-color: #bbb;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.infomation_items{
+    background-color: #eee;
+    box-shadow: 0 0 10px gray;
+    width: 435px;
+    margin-bottom: 5px;
+    padding: 20px 0 0 40px;
+}
+table th{
+    text-align: left;
+}
+
+
+
+
+
+
+.personal_fil{
+    background-color:#FCFCFC;
+    
+}
+
+.fil_body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.fil_body_items{
+    margin: 5px;
+    text-align: center;
+}
+
+
+
+
+.personal_fil_video{
+    background-color: #bbb;
+    text-align: center;
+    
+}
+
+
+.form{
+    background-color: #FCFCFC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+sup{
+    color: #f00;
+}
+
+.bottom{
+    background-color: #bbb;
+}
+.footer{
+    border-top: 2px solid #888;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px;
+}
+
+footer a{
+    display: block;
+    
+}
+footer img{
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.copyright{
+    width: 900px;
+    margin: auto;
+    text-align: center;
+    border-top: 2px solid #888;
+    padding: 20px 0px;
+}

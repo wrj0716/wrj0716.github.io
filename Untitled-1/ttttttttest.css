@@ -1,0 +1,143 @@
+
+.wrap{
+    
+    width: 520px;
+    margin: auto;
+    border: 1px solid #999;
+    padding: 10px;
+    overflow: hidden;
+
+}
+.img img{
+    float: left;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.wrapTitle{
+    float: left;
+    width: 460px;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+
+
+
+.table{
+    width: 520px;
+    margin: auto;
+    border: 1px solid #999;
+    padding: 0 10px;
+
+}
+.table img{
+    border-radius: 50%;
+/*    vertical-align: top;*/
+    margin-bottom: 30px;
+    margin-right: 5px;
+}
+
+
+
+.sample3 img{
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.sample3 .wrapTitle3{
+    padding-left: 45px;
+
+  text-align: left;
+}
+.sample3 h2{
+    text-indent: -50px;
+}
+
+.wrapTitle4 h2{
+    background:url(https://picsum.photos/40/40?random=1)no-repeat;
+    padding-left: 50px;
+}
+
+.wrapTitle4 p{
+    padding-left: 50px;
+}
+
+
+
+
+.sample5{
+    display: flex;
+}
+.sample5 img{
+    border-radius: 50%;
+    
+}
+.wrapTitle5{
+    padding-left: 5px;
+}
+
+
+
+.card{
+    width: 250px;
+    height: 360px;
+    box-shadow: 0 0 2px #222;
+}
+.card img{
+    width: 100%;
+}
+.card h2,.card p{
+    padding: 0 20px;
+}
+
+/*--------------------------*/
+.card2{
+    width: 400px;
+    height: 200px;
+    box-shadow: 0 1px 2px #666;
+    border-radius:10px;
+    display: flex;
+    flex-direction: row;
+}
+.card2 .cardLeft{
+    width: 40%;
+    height: 100%;
+    background-color: #09f;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    border-right: 2px solid #fff;
+    border-radius: 10px 0 0 10px;
+}
+.card2 h3{
+    color: #fff;
+}
+.card2 .cardRight{
+    width: 60%;
+    height: 100%;
+    background-color:darkblue;
+    border-radius:0 10px 10px 0;
+}
+.card2 .cardRight p{
+    color: #fff;
+    padding: 20px;
+}
+.card2 .cardLeft img{
+    width: 60%;
+    border-radius: 50%;
+}
+.card2 .cardRight img{
+    width: 30%;
+    border-radius: 50%;
+}
+.logo{
+    display: flex;
+    justify-content: space-around;
+}
+.All{
+    display: flex;
+    align-items: flex-end;
+ 
+}
