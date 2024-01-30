@@ -8,16 +8,21 @@ window.configure(bg='#666')
 #函數 function method
 userName="123"
 userPsw="456"
+
 def login():
-    # if len(username_entry)==0 or len(psw_entry)==0:
-    #     print("帳號密碼為必填")
-    # else:
-        
-    if username_entry.get()==userName and psw_entry.get()==userPsw:
-        messagebox.showinfo(title="登入系統",message=f"嗨，{userName}歡迎回來")
-        
+    entry_Name=username_entry.get()
+    entry_Psw=psw_entry.get()
+    if len(entry_Name)==0 or len(entry_Psw)==0:
+        print("帳號密碼為必填")
     else:
-        messagebox.showerror(title="登入訊息",message=f"很抱歉，帳號或密碼錯誤")
+        if len(entry_Name)<3 or len(entry_Psw)<3:
+            print("請輸入3-12位數字")
+        else:
+            if entry_Name==userName and psw_entry.get()==userPsw:
+                messagebox.showinfo(title="登入系統",message=f"嗨，{userName}歡迎回來")
+                
+            else:
+                messagebox.showerror(title="登入訊息",message=f"很抱歉，帳號或密碼錯誤")
 
 frame=tkinter.Frame(bg='#666',pady=40)
 
