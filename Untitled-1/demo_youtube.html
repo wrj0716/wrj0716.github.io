@@ -4,73 +4,270 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube</title>
-    <style>
-        *{
-            border: 0;
-            margin: 0;
-        }
-        .head{
-            width: 100%;
-            height: 55px;
-            background:#eee;
-            overflow: hidden;
-        }
-        .container .sideNav{
-            padding-left: 34px;
-            float: left;
-        }
-        .logoImg{
-            height: 55px;
-            background: url(img/yt_logo.png)no-repeat;
-            float: left;
-
-        }
-        .search input{
-            width: 668px;
-            height: 45px;
-            border-color: #000;
-            border-style: solid;
-            border-width: 1px 0 1px 1px;
-            border-radius: 50px;
-            /* float: left; */
-        }
-        .search .text{
-            padding-left: 20px;
-            color: aqua;
-            
-        }
-        .search button{
-            background-color: #eee;
-        }
-    </style>
+    <link rel="stylesheet" href="demo_youtube.css">
+    
 </head>
 <body>
+    <!-- container整個身體 -->
     <div class="container">
+        <!-- head頭部欄開始 -->
         <div class="head">
             <div class="sideNav">
-                <a href="#">三</a>
+                <a href="#"><img src="img/side_btn.png"></a>
             </div>
 
-            <div class="logoImg"></div>
+            <div class="logoImg">
+                <a href="#"><img src="img/yt_logo.png" alt=""></a>
+            </div>
 
             <div class="search">
                 <input type="text" value="搜尋">
-                <button>按鈕</button>
-
-                <div class="mic">
-                    <a href="#"></a>
-                </div>
+                <button></button>
             </div>
 
-            <div class="personal_tools">
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
+            <div class="mic">
+                <a href="#"><img src="img/VoiceSearch.png" alt=""></a>
             </div>
+            <!-- head頭部欄結束 -->
+        </div>
+        
+        <!-- sideNav_menu側邊導航欄開始 -->
+        <div class="sideNav_menu">
+            
+            <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">Short</a></li>
+                <li><a href="#">訂閱內容</a></li>
+            </ul>
+            
+            
+            <ul>
+                <a href="#" class="your_yt">你的內容</a>
+                <li><a href="#">你的頻道</a></li>
+                <li><a href="#">觀看紀錄</a></li>
+                <li><a href="#">你的影片</a></li>
+                <li><a href="#">你的短片</a></li>
+                <li><a href="#">顯示更多</a></li>
+            </ul>
 
+            <ul>
+                <li>訂閱內容</li>
+                <li><a href="#">老高與小茉</a></li>
+                <li><a href="#">老高與小茉</a></li>
+                <li><a href="#">老高與小茉</a></li>
+                <li><a href="#">老高與小茉</a></li>
+                <li><a href="#">老高與小茉</a></li>
+            </ul>
+
+            <ul>
+                <li>探索</li>
+                <li><a href="#">發燒影片</a></li>
+                <li><a href="#">音樂</a></li>
+                <li><a href="#">電影</a></li>
+                <li><a href="#">直播</a></li>
+                <li><a href="#">新聞</a></li>
+                <li><a href="#">體育</a></li>
+                <li><a href="#">Podcast</a></li>
+            </ul>
+
+            <ul>
+                <li>更多Youtube功能</li>
+                <li><a href="#">YouTube Premium</a></li>
+                <li><a href="#">YouTube工作室</a></li>
+                <li><a href="#">YouTube Music</a></li>
+                <li><a href="#">YouTube Kids</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">設定</a></li>
+                <li><a href="#">檢舉紀錄</a></li>
+                <li><a href="#">說明</a></li>
+                <li><a href="#">提供意見</a></li>
+            </ul>
+
+            <div class="copyright">
+                <p>&copy;2024 Sandy Wu Copyright</p>
+            </div>
 
             
         </div>
+         <!-- sideNav_menu側邊導航欄結束 -->
+
+
+        <div class="tag w">
+            <ul>
+                <li><a href="#">全部</a></li>
+                <li><a href="#">合輯</a></li>
+                <li><a href="#">音樂</a></li>
+                <li><a href="#">直播中</a></li>
+                <li><a href="#">健身</a></li>
+                <li><a href="#">動畫</a></li>
+                <li><a href="#">烹飪</a></li>
+                <li><a href="#">最新上傳</a></li>
+                <li><a href="#">已觀看</a></li>
+                <li><a href="#">讓你耳目一新的影片</a></li>
+            </ul>
+        </div>
+
+        <div class="title_video w">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZZgeGiyVk64?si=XHprIxlxdjPBDif0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
+            <a href="#" class="ed">
+                <h2>楷教練聊健身談人生：到底怎麼樣才能變成大支佬？</h2>
+                <p>贊助商廣告.Taiwan</p>
+                <button>來去逛逛</button>
+            </a>
+            
+        </div>
+        
+        <div class="wrap w">
+
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZOSKq8lpI7o?si=FrjdDKsJN8JgnOCu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <a href="#">
+                    <img src="../pic/myphoto.jpg" alt="">
+                </a>
+                <a href="#" class="user_title">
+                    <h2>【无损音质】甜心教主王心凌经典歌曲合集，快来感受一波回忆杀</h2>
+                    <p>KKBOX華語新歌排行榜</p>
+                    <p>觀看次數:75萬次.1天前</p>
+                </a>
+            </div>
+          
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZOSKq8lpI7o?si=FrjdDKsJN8JgnOCu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <a href="#">
+                    <img src="../pic/myphoto.jpg" alt="">
+                </a>
+                <a href="#" class="user_title">
+                    <h2>【无损音质】甜心教主王心凌经典歌曲合集，快来感受一波回忆杀</h2>
+                    <p>KKBOX華語新歌排行榜</p>
+                    <p>觀看次數:75萬次.1天前</p>
+                </a>
+            </div>
+
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZOSKq8lpI7o?si=FrjdDKsJN8JgnOCu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <a href="#">
+                    <img src="../pic/myphoto.jpg" alt="">
+                </a>
+                <a href="#" class="user_title">
+                    <h2>【无损音质】甜心教主王心凌经典歌曲合集，快来感受一波回忆杀</h2>
+                    <p>KKBOX華語新歌排行榜</p>
+                    <p>觀看次數:75萬次.1天前</p>
+                </a>
+            </div>
+
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZOSKq8lpI7o?si=FrjdDKsJN8JgnOCu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <a href="#">
+                    <img src="../pic/myphoto.jpg" alt="">
+                </a>
+                <a href="#" class="user_title">
+                    <h2>【无损音质】甜心教主王心凌经典歌曲合集，快来感受一波回忆杀</h2>
+                    <p>KKBOX華語新歌排行榜</p>
+                    <p>觀看次數:75萬次.1天前</p>
+                </a>
+            </div>
+          
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZOSKq8lpI7o?si=FrjdDKsJN8JgnOCu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <a href="#">
+                    <img src="../pic/myphoto.jpg" alt="">
+                </a>
+                <a href="#" class="user_title">
+                    <h2>【无损音质】甜心教主王心凌经典歌曲合集，快来感受一波回忆杀</h2>
+                    <p>KKBOX華語新歌排行榜</p>
+                    <p>觀看次數:75萬次.1天前</p>
+                </a>
+            </div>
+
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZOSKq8lpI7o?si=FrjdDKsJN8JgnOCu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <a href="#">
+                    <img src="../pic/myphoto.jpg" alt="">
+                </a>
+                <a href="#" class="user_title">
+                    <h2>【无损音质】甜心教主王心凌经典歌曲合集，快来感受一波回忆杀</h2>
+                    <p>KKBOX華語新歌排行榜</p>
+                    <p>觀看次數:75萬次.1天前</p>
+                </a>
+            </div>
+
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RjSB71wDUss?si=hKlSMiqalY9G5qoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <a href="#">
+                    <img src="../pic/myphoto.jpg" alt="">
+                </a>
+                <a href="#" class="user_title">
+                    <h2>【无损音质】鄧紫其经典歌曲合集，快来感受一波回忆杀</h2>
+                    <p>KKBOX華語新歌排行榜</p>
+                    <p>觀看次數:75萬次.1天前</p>
+                </a>
+            </div>
+
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RjSB71wDUss?si=hKlSMiqalY9G5qoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <a href="#">
+                    <img src="../pic/myphoto.jpg" alt="">
+                </a>
+                <a href="#" class="user_title">
+                    <h2>【无损音质】鄧紫其经典歌曲合集，快来感受一波回忆杀</h2>
+                    <p>KKBOX華語新歌排行榜</p>
+                    <p>觀看次數:75萬次.1天前</p>
+                </a>
+            </div>
+
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RjSB71wDUss?si=hKlSMiqalY9G5qoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <a href="#">
+                    <img src="../pic/myphoto.jpg" alt="">
+                </a>
+                <a href="#" class="user_title">
+                    <h2>【无损音质】鄧紫其经典歌曲合集，快来感受一波回忆杀</h2>
+                    <p>KKBOX華語新歌排行榜</p>
+                    <p>觀看次數:75萬次.1天前</p>
+                </a>
+            </div>
+
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RjSB71wDUss?si=hKlSMiqalY9G5qoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <a href="#">
+                    <img src="../pic/myphoto.jpg" alt="">
+                </a>
+                <a href="#" class="user_title">
+                    <h2>【无损音质】鄧紫其经典歌曲合集，快来感受一波回忆杀</h2>
+                    <p>KKBOX華語新歌排行榜</p>
+                    <p>觀看次數:75萬次.1天前</p>
+                </a>
+            </div>
+
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RjSB71wDUss?si=hKlSMiqalY9G5qoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <a href="#">
+                    <img src="../pic/myphoto.jpg" alt="">
+                </a>
+                <a href="#" class="user_title">
+                    <h2>【无损音质】鄧紫其经典歌曲合集，快来感受一波回忆杀</h2>
+                    <p>KKBOX華語新歌排行榜</p>
+                    <p>觀看次數:75萬次.1天前</p>
+                </a>
+            </div>
+
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RjSB71wDUss?si=hKlSMiqalY9G5qoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <a href="#">
+                    <img src="../pic/myphoto.jpg" alt="">
+                </a>
+                <a href="#" class="user_title">
+                    <h2>【无损音质】鄧紫其经典歌曲合集，快来感受一波回忆杀</h2>
+                    <p>KKBOX華語新歌排行榜</p>
+                    <p>觀看次數:75萬次.1天前</p>
+                </a>
+            </div>
+        </div>
+
+
 
     </div>
 </body>
