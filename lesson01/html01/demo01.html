@@ -2,6 +2,10 @@
 <html lang="zh-tw">
     <head>
         <meta charset="UTF-8">
+        <!-- float準則:
+            1.標準流先設置上下位置排列，再設置浮動左右排列
+            2.先設置盒子大小，後設置盒子位置
+         -->
         <title>新浪導航欄</title>
         <style>
             *{
@@ -11,6 +15,7 @@
             body{
                 background-color: #f5f5f5;
             }
+            /* 產品 */
            .box{
             width: 298px;
             height: 415px;
@@ -42,9 +47,85 @@
             padding-left: 20px;
             margin-left: 10px;
            }
+           /* 小米 */
+           .wrap{
+            width: 1200px;
+            height: 460px;
+            margin: 0 auto;
+            background-color: #fff;
+           }
+           .nav{
+            width: 230px;
+            height: 460px;
+            float: left;
+           }
+           .nav li{
+            height: 32px;
+            line-height: 30px;
+            padding: 6px 20px;
+            list-style: none;
+            background-color: #f77;
+           }
+           .nav li a{
+            display:block;
+            color: #fff;
+            text-decoration: none;
+           }
+           .right img{
+            width: 970px;
+            height: 460px;
+            float: left;
+           }
+
+           /* 好幾個小產品 */
+           .Box{
+            width: 1226px;
+            height: 285px;
+            background-color: #f11;
+            margin: 0 auto ;
+           }
+           .Box li{
+            width: 296px;
+            height: 285px;
+            background-color: #eef;
+            list-style: none;
+            float: left;
+            margin-right: 14px;
+           }
+           .Box .Li{
+            margin-right: 0;
+           }
+
+           /* 更多個小產品 */
+           .more{
+            width: 1226px;
+            height: 615px;
+            background: #099;
+            margin: 0 auto;
+           }
+           .IMG{
+            width: 234px;
+            height: 615px;
+            background-color: #f00;
+            float: left;
+           }
+           .Right{
+            width: 992px;
+            height: 615px;
+            background-color: #f8f;
+            float: left;
+           }
+           .Right>div{
+            width: 234px;
+            height: 300px;
+            background-color: #fff;
+            float: left;
+            margin: 0 0 14px 14px;
+           }
         </style>
     </head>
     <body>
+        <!-- 產品 -->
         <div class="box">
             <img src="../pic/20180716-59.jpg" alt="">
             <p class="review">主題主題主題主題主題主題主題主題主題主題主題主題主題主題</p>
@@ -53,6 +134,55 @@
                 產品名稱產品名稱... <span> 99.9元 </span>
             </div>
         </div>
-    
+        
+        <!-- /* 小米 */ -->
+        <div class="wrap">
+            <div class="nav">
+                <ul>
+                    <li><a href="">首頁</a></li>
+                    <li><a href="">首頁</a></li>
+                    <li><a href="">首頁</a></li>
+                    <li><a href="">首頁</a></li>
+                    <li><a href="">首頁</a></li>
+                    <li><a href="">首頁</a></li>
+                    <li><a href="">首頁</a></li>
+                    <li><a href="">首頁</a></li>
+                    <li><a href="">首頁</a></li>
+                    <li><a href="">首頁</a></li>
+                </ul>
+            </div>
+
+            <div class="right">
+                <img src="https://picsum.photos/500/400?random=1" alt="">
+            </div>
+        </div>
+
+        <!-- 好幾個小產品 -->
+        <div class="Box">
+            <ul>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li class="Li">1</li>
+            </ul>
+        </div>
+
+        <!-- 更多個小產品 -->
+        <div class="more">
+            <div class="IMG">
+                
+            </div>
+
+            <div class="Right">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+            </div>
+        </div>
     </body>
 </html>
