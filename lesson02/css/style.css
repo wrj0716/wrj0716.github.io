@@ -1,0 +1,102 @@
+/* 全域 */
+.clearfix::after{ /* 偽元素:於元素後方增加內容 */
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+/* 導覽列 */
+nav{
+    width: 100%;
+    height: 60px;
+    background-color: #faa;
+}
+
+/* 頁首 */
+header{
+    width: 100%;
+    height: 200px;
+    background-color: #f0a;
+}
+
+/* 內容 */
+main{
+    width: 80%;
+    /* height: 1000px; */
+    background-color: rgb(240, 240, 240);
+    margin: 0 auto;
+}
+#left{
+    width: 30%;
+    height: 500px;
+    background-color: #f90;
+    float: left;
+}
+#tr{
+    width: 100px;
+    height: 100px;
+    background-color: #555;
+    margin: 100px 0 0 100px;
+    /* transform: translateX(200px);變形X軸移動 */
+    /* transform: scaleX(2); 變形X放大*/
+    /* transform: rotate(45deg);旋轉 */
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px #000;
+}
+#tr:hover{
+    transition-property: background-color;
+    background-color: #fff;
+    transition-duration: 2s;
+}
+#right{
+    width: 70%;
+    height: 800px;
+    background-color: #f00;
+    float: left;
+    position: relative;
+}
+
+section{
+    width: 100%;
+    height: 200px;
+}
+#sec_1{
+    width: 400px;
+    background-color: #aaa;
+    position: relative;
+}
+#sec_2{
+    background-color: #777;
+    position: relative;
+}
+#sec_3{
+    background-color: #555;
+    position: relative;
+}
+ul{
+    width: 100%;
+    background-color: #eee;
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    padding-bottom: 5px;
+}
+li{
+    width: 23%;
+    height: 40px;
+    background-color: yellow;
+    text-align: center;
+    margin-top: 5px;
+    /* display: inline-block; */
+    /* float: left; */
+}
+ 
+/* 頁尾 */
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(50, 100, 200, .5);
+}
