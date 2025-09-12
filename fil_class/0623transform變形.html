@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: #000;
+            color: #fff;
+            margin: 5em auto;
+            transition: all 1s;
+            transform-origin: 0 0; /*定位中心點*/
+            transform: perspective(100px);  /*透視點*/
+        }
+        div:hover{
+            transform: scaleX(2);
+            transform: scaleY(2);
+            transform: scale(2);  /*X.Y軸一起放大*/
+
+            transform: skew(30deg,60deg);
+            transform: skewX(60deg);  /*水平傾斜*/
+            transform: skewY(60deg);  /*垂直傾斜*/
+
+            transform:rotateX(80deg);  /*水平(上下)旋轉*/
+            transform:rotateY(80deg);  /*垂直(左右)旋轉*/
+            transform:rotateZ(90deg);  /*中心旋轉*/
+
+            transform: translateX(200px);  /*水平移動*/
+            transform: translateY(200px);  /*垂直傾斜*/
+
+        }
+    </style>
+</head>
+<body>
+    <div>11</div>
+</body>
+</html>

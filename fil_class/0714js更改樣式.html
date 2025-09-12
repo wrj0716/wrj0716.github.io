@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <h2 onclick="change('blue')">hiiii</h2>
+</body>
+</html>
+<script>
+    let h1 = document.querySelector("h1");
+    h1.style.color = "red";
+    h1.style.fontSize = "50px";
+    h1.style.textAlign = "center";
+
+    // function change(e)裡面的e裝的是變數，隨便取，為得是將呼叫時的內容放入時，用的縮寫
+    function change(e){
+        let h2 = document.querySelector('h2');
+        h2.style.color = e;
+        h2.style.fontSize = "100px";
+        h2.style.textAlign = "center";
+    }
+</script>

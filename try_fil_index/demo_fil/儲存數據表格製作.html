@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>儲存數據表格製作</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            margin: 50px 0;
+            text-align: center;
+        }
+        .btn{
+            cursor: pointer;
+            background-color: #0aa;
+        }
+        .header{
+            width: 500px;
+            height: 40px;
+            margin: auto;
+            margin-top: 50px;
+            padding-right: 5px;
+            text-align: right;
+            line-height: 40px;
+            background-color: #0cc;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        table{
+            width: 500px;
+            border: 1px solid #000;
+            margin: 10px auto;
+            border-collapse: collapse;
+        }
+        table th,td{
+            height: 50px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        table th{
+            background-color: #0cc;
+        }
+       
+    </style>
+</head>
+<body>
+    
+    
+    <h1>新增學員</h1>
+    <form class="info" autocomplete="off">
+        <label for="name">姓名:</label>
+        <input type="text" class="name" name="name" id="name">
+        <label for="age">年齡:</label>
+        <input type="text" class="age" name="age" id="age">
+            性別:
+        <select class="gender" name="gender" id="gender">
+            <option value="男">男</option>
+            <option value="女">女</option>
+        </select>
+            城市:
+        <select class="city" name="city" id="city">
+            <option value="北">北</option>
+            <option value="中">中</option>
+            <option value="南">南</option>
+        </select>
+        <button class="btn">送出</button>
+    </form>
+
+    <h1>名單</h1>
+    <div class="header">共有數據<span>N</span>條</div>
+    <table>
+        <thead>
+            <tr>
+                <th>學號</th>
+                <th>姓名</th>
+                <th>年齡</th>
+                <th>性別</th>
+                <th>城市</th>
+                <th>錄入時間</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- <td>01</td>
+                <td>qqq</td>
+                <td>18</td>
+                <td>女</td>
+                <td>北</td>
+                <td>2024.12.12 00:00</td>
+                <td><a href="#" title="刪除">刪除</a></td> -->
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        // 先創立數組對象
+        const arr = [
+        {
+            num:1,
+            name:'qqq',
+            age:18,
+            gender:'男',
+            city:'北',
+            time:'2024.12.12 00:00',
+        }
+        ]
+
+        // 儲存在本地，
+    //    localStorage.setItem('obj',JSON.stringify(arr))
+        const getArrItem = localStorage.getItem('obj')
+       const arrJson = JSON.parse(getArrItem) || []
+       console.log(arrJson);
+
+       const info = document.querySelector('.info')
+       const tbody = document.querySelector('tbody')
+       let name = document.querySelector('.name')
+        let age = document.querySelector('.age')
+        let gender = document.querySelector('.gender')
+        let city = document.querySelector('.city')
+
+       const now = new Date();
+       const today = now.toLocaleString('zh-tw')
+       console.log(today);
+
+
+       info.addEventListener('submit',function(e){
+        e.preventDefault()
+        
+        arrJson.push(
+            {
+            num:arrJson.length? arrJson[arrJson.length-1].num+1 : 1,//arrJson.length+1,[1]
+            name:name.value,
+            age:age.value,
+            gender:gender.value,
+            city:city.value,
+            time:today,
+        }
+        )
+        list()
+        this.reset()
+
+        localStorage.setItem('obj',JSON.stringify(arrJson))
+       })
+
+       
+       function list(){
+        // arrJson.push(
+        //     {
+        //     num:arrJson.length+1,
+        //     name:name.value,
+        //     age:age.value,
+        //     gender:gender.value,
+        //     city:city.value,
+        //     time:today,
+        // }
+        // )
+        let trArr = arrJson.map(function(ele,index){
+            // console.log(ele);
+            return`
+            <tr>
+                <td>${ele.num}</td>
+                <td>${ele.name}</td>
+                <td>${ele.age}</td>
+                <td>${ele.gender}</td>
+                <td>${ele.city}</td>
+                <td>${today}</td>
+                <td><a href="#" data-id=${index} title="刪除">刪除</a></td>
+            </tr>
+            `
+        })
+        // console.log(trArr);
+            tbody.innerHTML = trArr.join('')
+            // console.log(tbody);
+            document.querySelector('span').innerHTML = `${arrJson.length}`
+
+       }
+       
+       tbody.addEventListener('click',function(e){
+        if(e.target.tagName === "A"){
+            console.log(e.target.dataset.id);
+            arrJson.splice(e.target.dataset.id,1)
+            localStorage.setItem('obj',JSON.stringify(arrJson))
+            list()
+        }
+       })
+    </script>
+</body>
+</html>

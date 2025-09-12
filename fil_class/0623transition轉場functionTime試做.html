@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;  
+            box-sizing: border-box;
+        }
+    
+        div{
+            margin-top: 1em;
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+            color: #fff;
+            transition:all 3s;
+            position: relative;
+            left: 0;
+        }
+
+        /* 線性移動 */
+        header:hover .linear{
+            transition-timing-function: linear;
+            left: 100%;
+        }
+
+        /* 先慢再快 */
+        header:hover .ease-in-out{
+            transition-timing-function: ease-in-out;
+            left: 100%;
+        }
+
+        /* 慢 */
+        header:hover .ease-in{
+            transition-timing-function: ease-in;
+            left: 100%;
+        }
+
+        /* 先快再慢 */
+        header:hover .ease-out{
+            transition-timing-function: ease-out;
+            left: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="linear">linear</div>
+        <div class="ease-in-out">ease-in-out</div>
+        <div class="ease-in">ease-in</div>
+        <div class="ease-out">ease-out</div>
+    </header>
+    
+</body>
+</html>

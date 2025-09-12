@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        display: block;
+        width: 200px;
+        background-color: skyblue;
+    }
+    .list{
+        margin-top: 2em;
+    }
+    .list article{
+        border-bottom: 1px solid #000;
+
+    }
+</style>
+<body>
+    <h1>無名小站</h1>
+    <p>標題</p>
+    <input type="text" id="title">
+    <p>內容</p>
+    <textarea name="contant" id="contant" rows="6"></textarea>
+    <button id="post">發布</button>
+    <main class="list">
+        <!-- <article>
+            <h2>今天天氣真好</h2>
+            <p>男人十大完全拒絶計算滿足第三，有意一片。</p>
+        </article> -->
+        
+    </main>
+    <script>
+        alert('123')
+        alert('456')
+        let title = document.querySelector('#title')
+        let contant = document.querySelector('#contant')
+        let post = document.querySelector('#post')
+        let list = document.querySelector('.list')
+        post.addEventListener('click',function(){
+            // console.log(title.value);
+            list.innerHTML = list.innerHTML+`
+                <article>
+                    <h2>${title.value}</h2>
+                    <p>${contant.value}</p>
+                </article>
+            `
+            title.value = contant.value = ''
+            // console.log(list.innerHTML);
+            // console.log(title);
+
+        })
+    </script>
+</body>
+</html>

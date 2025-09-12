@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header{
+            width: 100%;
+            height: 2.5em;
+            line-height: 2.5em;
+            text-align: center;
+            box-shadow: 0 2px 2px gray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button type="button" id="minu">-</button>
+        <span>16</span>
+        <button type="button" id="add">+</button>
+        <button type="button" id="day">日間</button>
+        <button type="button" id="night">夜間</button>
+    </header>
+    <main>
+        <p>現代你還裝置之家，她是更新時間發揮破壞將其有一些，韓國科技採用奇怪戰鬥不再以往體會，職務要有事項根據下午種子看出高達年輕人夫妻畢竟，當天公司今年性感家族無數最新一笑開心下載查找，下載那裡上次，完美遠。</p>
+        <p>
+            較大我來日誌簡介則是衛生，找到查看不代表選單越來越反正如此，出版社民主玩家評估醫院都不體驗姐姐台中它們出席電話查詢，青春收藏本頁作家並非態度設施章節球員品種每月，外資一半歐洲，參考眼中也能諮詢自由一路，得分滿意左右西安，三大警察業主具體資訊更新農村各項，角度中港路特徵這些宣佈，我也參數請在部隊降價型號機關警察窗口街道黃金你看，好激動相機不然說明物品等方面，開放用來，戀愛品牌平靜，電器更是律師，家。
+        </p>
+    </main>
+</body>
+</html>
+<script>
+    let minu = document.querySelector('#minu')
+    let add = document.querySelector('#add')
+    let day = document.querySelector('#day')
+    let night = document.querySelector('#night')
+    let span = document.querySelector('span')
+    let main = document.querySelector('main')
+    let size = 16
+    minu.addEventListener('click',function(){
+        size--;
+        main.style.fontSize = size +'px';
+        // span.textContent = size
+        span.innerHTML = size
+    })
+    add.addEventListener('click',function(){
+        size++;
+        main.style.fontSize = size +'px';
+        // span.textContent = size
+        span.innerHTML = size
+
+    })
+    day.addEventListener('click',function(){
+        main.style.color = "#000";
+        main.style.backgroundColor = "#fff";
+    })
+    night.addEventListener('click',function(){
+        main.style.color = "#fff";
+        main.style.backgroundColor = "#000";
+    })
+</script>

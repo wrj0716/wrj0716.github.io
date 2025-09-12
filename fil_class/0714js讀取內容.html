@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="app">hello</h1>
+    <input type="text" name="user" value="lcc">
+</body>
+</html>
+<script>
+    // textContent:主要讀取一般元素內容
+    // value:主要讀取表單元素內容
+    let a = document.getElementById('app')
+    let user = document.getElementsByName('user')[0]
+    console.log(a.textContent, user.value);
+</script>

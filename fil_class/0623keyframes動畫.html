@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+            animation: run 3s infinite;
+        }
+        @keyframes run{
+            0%{
+                transform: translate(0,0px);
+            }
+            50%{
+                transform: translate(80vw,0px);
+            }
+            80%{
+                transform: translate(80vw,90vh);
+            }
+            100%{
+                transform: translate(0,90px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

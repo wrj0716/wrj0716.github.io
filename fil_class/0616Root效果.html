@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 先用root自創設定好各種顏色，div的各種顏色可用var套上 */
+    :root{
+        --mainColor: red;
+        --bgColor: gray;
+        --textColor: #fff;
+    }
+    div{
+        background-color: var(--bgColor);
+        color: var(--mainColor);
+    }
+    ul li:nth-of-type(3n){
+        background-color: pink;
+    }
+
+</style>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ratione, ea ducimus maxime impedit velit molestiae et vero quis dicta odio, soluta est. Dolores assumenda nulla ea sint praesentium corrupti!
+    </div>
+</body>
+</html>

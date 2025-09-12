@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandy's網頁架構</title>
+    <link rel="stylesheet" href="css/css_reset_2024.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/2b434d48fe.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/sandy_logo_icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <!-- 導覽列 -->
+   <nav>
+        <div id="ham">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+
+        <div id="logo">
+            <a href="#header">SANDY_DESIGN</a>
+        </div>
+        
+        <ul id="menu">
+            <li><a href="#about">自我介紹About</a></li>
+            <li><a href="#work">作品展示Portfolio</a></li>
+            <li><a href="#contect">與我聯繫Contact Me</a></li>
+        </ul>
+   </nav>
+   <!-- 頁首 -->
+    <header id="header">
+        <h1>Start Your Journey with Sandy.</h1>
+        <a href="#wrap">show you now&#8594;</a>
+        <div class="back_top">
+            <div class="top">
+                <p>聯絡我|
+                    <i class="fa-brands fa-square-instagram" style="color: #f218b7;"></i>
+                    <i class="fa-brands fa-line" style="color: #087214;"></i>
+                    <i class="fa-brands fa-facebook" style="color: #0645b1;"></i>
+                </p>
+            </div>
+            <div class="boton">
+                <p>
+                    <a href="#header">
+                        <i class="fa-solid fa-chevron-up" style="color: #16181b;"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 首頁內容 -->
+    <div class="wrap" id="wrap">
+        <aside>
+            <ul>
+                <li class="list_title">網頁設計</li>
+                    <ul class="list">
+                        <li><a href="#">公司企業</a></li>
+                        <li><a href="">餐飲休閒</a></li>
+                        <li><a href="">健身</a></li>
+                        <li><a href="">客製化</a></li>
+                    </ul>
+    
+    
+                <li class="list_title">攝影作品</li>
+                    <ul class="list">
+                        <li><a href="">婚禮宴會</a></li>
+                        <li><a href="">企業或個人形象</a></li>
+                        <li><a href="">健身健美</a></li>
+                        <li><a href="">展場寫真</a></li>
+                    </ul>
+
+                <li class="list_title">技術文章</li>
+                    <ul class="list">
+                        <li><a href="">最新技術</a></li>
+                        <li><a href="">技術分享</a></li>
+                        
+                    </ul>
+            </ul>
+        </aside>
+
+        <div class="wrap_right">
+            <ul>
+                <!-- 第一格 -->
+                <li>
+                    <a href="#about">
+                        <div class="mask">
+                            <div class="mask_title">
+                                自我介紹
+                                About
+                            </div>
+                        </div>
+                    </a>
+                    <img src="images/1.jpg" alt="">
+                </li>
+                <!-- 第二格 -->
+                <li>
+                    <a href="#work">
+                        <div class="mask">
+                            <div class="mask_title">
+                                最新作品
+                                New
+                            </div>
+                        </div>
+                    </a>
+                    <img src="images/1.jpg" alt="">
+                </li>
+                <!-- 第三格 -->
+                <li>
+                    <a href="#work">
+                        <div class="mask">
+                            <div class="mask_title">
+                                作品展示
+                                Portfolio
+                            </div>
+                        </div>
+                    </a>
+                    <img src="images/1.jpg" alt="">
+                </li>
+                <!-- 第四格 -->
+                <li>
+                    <a href="#contect">
+                        <div class="mask">
+                            <div class="mask_title">
+                                與我聯繫
+                                Contact
+                            </div>
+                        </div>
+                    </a>
+                    <img src="images/1.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <!-- 內容 -->
+    <main id="main">
+        <!-- 內容1:關於我 -->
+        <section id="about">
+            <ul>
+                <li id="myphoto">
+                    <img src="images/sandy.jpg" alt="">
+                </li>
+                <li id="myphoto_info">
+                    <div class="top_line"></div>
+                    <h1>About Sandy</h1>
+                    <p>
+                        是一名擁有天馬行空想法的網路工作者，
+                        有別於傳統的廣告設計，喜歡結合時事及迷因創作出具有創意感的作品。
+                    </p>
+                    <p>
+                        An Internet worker with blue-sky thinking,
+                        which is different from traditional advertising design. 
+                        Likes to combine current events and memes to create creative works.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ~~過渡圖片~~ -->
+        <div class="bgi"></div>
+        
+        <!-- 內容2:所有作品 -->
+        <section id="work">
+            <div class="top_line"></div>
+            <h1>All Portfolio</h1>
+
+            <div class="portfolio">
+                <h2>最新作品 <span>New</span></h2>
+                <ul class="photo"><!-- 上課用 --> 
+                    <li>
+                        <img src="images/me.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/me.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/me.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <ul id="design">
+                <!-- 另外用js加入照片 -->
+            </ul>
+
+            <div class="portfolio">
+                <h2>網頁設計 <span>WebDesign</span></h2>
+                <ul class="photo">
+                    <li>
+                        <a href="">
+                            <img src="images/me.jpg" alt="">
+                            公司企業
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/me.jpg" alt="">
+                            餐飲休閒
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/me.jpg" alt="">
+                            健身
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="portfolio">
+                <h2>攝影作品 <span>Photography</span></h2>
+                <ul class="photo">
+                    <li>
+                        <img src="images/me.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/me.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/me.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="portfolio">
+                <h2>技術文章 <span>Tech Blog</span></h2>
+                <ul class="photo">
+                    <li>
+                        <img src="images/me.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/me.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/me.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 內容3:聯繫我 -->
+        <section id="contect">
+            <div class="top_line"></div>
+            <h1>FAQ</h1>
+
+            <div class="faq">
+                <ul>
+                    <li>設計要準備甚麼?設計要準備甚麼?設計要準備甚麼?</li>
+                    <li>設計要準備甚麼?</li>
+                    <li>設計要準備甚麼?</li>
+                    <li>設計要準備甚麼?</li>
+                    <li>設計要準備甚麼?</li>
+                </ul>
+            </div>
+
+            <a class="down" href="#addr"></a>    
+            
+            <div class="addr" id="addr">
+                <h1>Addr</h1>
+                <ul class="addr_left">
+                    <li>地址:</li>
+                    <li>台北市中華路二段55號</li>
+                    <li>電話:</li>
+                    <li>0998-654-321</li>
+                    <li>傳真: </li>
+                    <li>(03)8888-8888</li>
+                    <li>E-mail:</li>
+                    <li>thisisemail@mail.com</li>
+                    <li>Line ID:</li>
+                    <li>Sandy_Design</li>
+                </ul>
+                <ul class="addr_right">
+                    <li>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3614.979549494928!2d121.503766875158!3d25.0347680778159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1709567407846!5m2!1szh-TW!2stw" width="800" height="530" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </li>
+                </ul>
+            </div>
+            <div id="app">
+                <div class="app_chat">
+                    <a href="">
+                        <img src="images/iglogo.png" alt="">
+                    </a>
+                </div>
+                <div class="app_chat">
+                    <a href="">
+                        <img src="images/line_logo.png" alt="">
+                    </a>
+                </div>
+                <div class="app_chat">
+                    <a href="">
+                        <img src="images/fblogo.png" alt="">
+                    </a>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+    <!-- 頁尾 -->
+    <footer>
+        <ul>
+            <li>
+                <img id="footer_logo" src="images/classlogo.png" alt="">
+            </li>
+            <li>
+                © 2024 Sandy的網站 | Powered by Sandy的網站
+            </li>
+            <li></li>
+        </ul>
+        
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增元素及添加表格內容</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            margin: 50px 0;
+            text-align: center;
+            /* background-color: pink; */
+        }
+        .btn{
+            cursor: pointer;
+            background-color: #0aa;
+        }
+        table{
+            width: 500px;
+            
+            border: 1px solid #000;
+            margin: 50px auto;
+            border-collapse: collapse;
+        }
+        table th,td{
+            height: 50px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        table th{
+            background-color: #0cc;
+        }
+      
+    </style>
+</head>
+<body>
+    
+    <h1>新增學員</h1>
+    <form class="info" autocomplete="off">
+        <label for="name">姓名:</label>
+        <input type="text" class="name" name="name" id="name">
+        <label for="age">年齡:</label>
+        <input type="text" class="age" name="age" id="age">
+            性別:
+        <select class="gender" name="gender" id="gender">
+            <option value="男">男</option>
+            <option value="女">女</option>
+        </select>
+        <label for="money">薪資:</label>
+        <input type="text" class="money" name="money" id="money">
+            城市:
+        <select class="city" name="city" id="city">
+            <option value="北">北</option>
+            <option value="中">中</option>
+            <option value="南">南</option>
+        </select>
+        <button class="btn">送出</button>
+    </form>
+
+    <h1>名單</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>學號</th>
+                <th>姓名</th>
+                <th>年齡</th>
+                <th>性別</th>
+                <th>薪資</th>
+                <th>城市</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- <td>01</td>
+                <td>qqq</td>
+                <td>18</td>
+                <td>女</td>
+                <td>100</td>
+                <td>北</td>
+                <td><a href="#" title="刪除">刪除</a></td> -->
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        // 獲取父元素，點擊對象禁止跳轉，所有格子為必填，把輸入的內容渲染到table內，送出後格子reset
+        const arr = []
+
+        let name = document.querySelector('.name')
+        let age = document.querySelector('.age')
+        let gender = document.querySelector('.gender')
+        let money = document.querySelector('.money')
+        let city = document.querySelector('.city')
+        let tbody = document.querySelector('tbody')
+
+        const info = document.querySelector('.info')
+        info.addEventListener('submit',function(e){
+            e.preventDefault()
+
+            // 如果value格子內沒有內容的話就返回(非空判斷)
+            if(!name.value || !age.value || !money.value){
+               return alert ("不可空白")
+            }
+            
+            const obj = {
+                num:arr.length+1,
+                name:name.value,
+                age:age.value,
+                gender:gender.value,
+                money:money.value,
+                city:city.value,
+            }
+            arr.push(obj)
+            list()
+            this.reset()
+        })
+        // 新增tr元素，並加入到tbody內
+        function list(){
+            tbody.innerHTML = ''
+            for(i = 0 ; i<arr.length ; i++){
+                const tr = document.createElement('tr')
+                tr.innerHTML = `
+                    <td>${arr[i].num}</td>
+                    <td>${arr[i].name}</td>
+                    <td>${arr[i].age}</td>
+                    <td>${arr[i].gender}</td>
+                    <td>${arr[i].money}</td>
+                    <td>${arr[i].city}</td>
+                    <td><a href="#" data-id=${[i]} title="刪除">刪除</a></td>
+                `
+                tbody.appendChild(tr)
+            }
+            
+        }
+        // 刪除選取的A連接
+        tbody.addEventListener('click',function(e){
+            
+            if(e.target.tagName === 'A'){
+                console.log(e.target.dataset.id);
+                arr.splice(e.target.dataset.id,1)
+            }
+            list()
+        })
+
+
+
+
+
+
+
+
+
+
+
+        // 先創空數組
+        // 阻止事件跳轉
+        // 將資料匯入物件後加入數組
+        // 渲染於名單
+        // let arr = []
+
+        // let name = document.querySelector('.name')
+        // let age = document.querySelector('.age')
+        // let gender = document.querySelector('.gender')
+        // let money = document.querySelector('.money')
+        // let city = document.querySelector('.city')
+        // let tbody = document.querySelector('tbody')
+        // let items = document.getElementsByName('name')
+
+        // let info = document.querySelector('.info')
+        // info.addEventListener('submit',function(e){
+        //     e.preventDefault()
+
+            
+        //     // console.log(items.length);
+        //     for(i=0;i<items.length;i++){
+        //         if(items[i].value === ''){
+        //             return alert("no")
+        //         }
+        //     }
+            
+        // let obj = {
+        //         num:arr.length+1 ,
+        //         name:name.value,
+        //         age:age.value,
+        //         gender:gender.value,
+        //         money:money.value,
+        //         city:city.value,
+        //     }
+        //     arr.push(obj)
+        //     // console.log(arr);
+        //     list()
+        //     this.reset()
+            
+        // })
+
+        // function list(){
+        //     tbody.innerHTML = ''
+
+        //     for(i=0;i<arr.length;i++){
+        //         let tr = document.createElement('tr')
+                
+        //         tr.innerHTML=`
+        //         <td>${arr[i].num}</td>
+        //         <td>${arr[i].name}</td>
+        //         <td>${arr[i].age}</td>
+        //         <td>${arr[i].gender}</td>
+        //         <td>${arr[i].money}</td>
+        //         <td>${arr[i].city}</td>
+        //         <td><a href="#" data-id=${i} title="刪除">刪除</a></td>
+        //         `
+        //         tbody.appendChild(tr)
+        //     }
+        // }
+
+        // tbody.addEventListener('click',function(e){
+        //     if(e.target.tagName === "A"){
+        //         // console.log(e.target.dataset.id);
+        //         arr.splice(e.target.dataset.id,1)
+        //         // console.log(arr);
+        //         list()
+        //     }
+        //     // console.log(e.target.tagName);
+        // })
+    </script>
+</body>
+</html>

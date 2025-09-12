@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="box">hello</h1>
+    <h1 class="box">hi</h1>
+    <h2 class="box">morning</h2>
+    <h2 class="box" id="night">night</h2>
+</body>
+</html>
+<script>
+    // querySelectorAll:獲取所有選擇器，記得要加數值
+    // let a = document.querySelectorAll('h1')[0];
+    // let a = document.querySelectorAll('.box')[2]
+    // let a = document.querySelectorAll('#night')[0]
+    let a = document.querySelector('#night');
+    console.log(a.textContent);
+</script>

@@ -1,0 +1,316 @@
+*{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+input{
+    appearance: none;
+}
+img,a{
+    -webkit-touch-callout: none;
+}
+body{
+    height: 3000px;
+    width: 100%;
+    max-width: 960px;
+    min-width: 320px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+/* 頭部區 */
+header{
+    height: 45px;
+}
+header ul li{
+    float: left;
+    height: 45px;
+    background-color: #333;
+    text-align: center;
+    line-height: 45px;
+}
+header ul li:first-child{
+    width: 10%;
+}
+header ul li:first-child img{
+    width: 10px;
+    vertical-align: middle;
+}
+header ul li:nth-child(2){
+    width: 10%;
+}
+header ul li:nth-child(2) img{
+    width: 30px;
+    vertical-align: middle;
+}
+header ul li:nth-child(3){
+    width: 55%;
+    color: #fff;
+}
+header ul li:last-child{
+    width: 25%;
+    background-color: rgb(238, 88, 34);
+}
+header ul li:last-child a{
+    display: block;
+    color: #fff;
+}
+/* 搜尋區 */
+.search-wrap{
+    height: 44px;
+    width: 100%;
+    position: fixed;
+    max-width: 960px;
+    min-width: 320px;
+    background-color: rgb(238, 88, 34);
+    overflow: hidden;
+    text-align: center;
+    line-height: 44px;
+}
+.search-btn{
+    /* 因為search-input的關係所以漂浮定位 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    float: left;
+    width: 40px;
+    height: 44px;
+}
+.search-btn img{
+    vertical-align: middle;
+}
+.search-input{
+    position: relative;
+    height: 30px;
+    background-color: #fff;
+    margin: 7px 50px 0;
+    border-radius: 15px;
+}
+.jd-icon{
+    position: absolute;
+    top: 7px;
+    left: 20px;
+    width: 16px;
+    height: 16px;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAwUExURUdwTP8vEvsrGPkrGfkrF/osGfosGPkrGfkvF/osGPosGPsrF/orGPssGPkvGvosGW/l7QIAAAAPdFJOUwAQn+9g379wIJCwQ4DPME152SwAAABySURBVAjXY2BgLLO32sAABE+NXMo+CTAw8JkBia0XGRhYFwBFOSwZGPwbQPL+AgxJIJqBuYDBHMzgUmD4AmOEgxlsExiWgRn9Gxj2g01VBQpGAGl2oErGqw4MjPMPAHmSn5Pum7OCWC1KUwR4/jBAwVEAwNgZS5Zo3jIAAAAASUVORK5CYII=)no-repeat;
+}
+.jd-icon::after{
+    position: absolute;
+    left: 25px;
+    content: '';
+    width: 1px;
+    height: 16px;
+    border-right: 1px solid #ccc;
+}
+.search-input input{
+    position: relative;
+    left: 27px;
+    top: -8px;
+    width:93%;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    /* -webkit-box-direction: normal; */
+
+}
+.search-login{
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    width: 40px;
+    height: 44px;
+}
+.search-login a{
+    color: #fff;
+}
+.conntant .slider img{
+    width: 100%;
+}
+/* 主內容 */
+/* 主要廣告區 */
+
+/* .banner-dm{
+    float: left;
+}
+.banner-dm a{
+    display: block;
+    width: 180px;
+    height: 180px;
+}
+.banner-dm:first-child{
+    background: url(https://cf.shopee.tw/file/sg-11134252-7rd4l-lw5gfdvpduu8c2)no-repeat;
+    background-position: 0px;
+    background-size: 600px;
+    width: 180px;
+    height: 180px;
+}
+.banner-dm:nth-child(2){
+    background: url(https://cf.shopee.tw/file/sg-11134252-7rd4l-lw5gfdvpduu8c2)no-repeat;
+    background-position: -180px;
+    background-size: 600px;
+    width: 240px;
+    height: 180px;
+}
+.banner-dm:last-child{
+    background: url(https://cf.shopee.tw/file/sg-11134252-7rd4l-lw5gfdvpduu8c2)no-repeat;
+    background-position: right;
+    background-size: 600px;
+    width: 180px;
+    height: 180px;
+} */
+.banner{
+    position: relative;
+}
+.banner img{
+    width: 100%;
+}
+.banner-click{
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    overflow: hidden;
+    width: 100%;
+}
+.banner-click a{
+    display: block;
+    float: left;
+    width: 33%;
+    height: 270px;
+}
+
+/* nav導航區 */
+nav{
+    overflow: hidden;
+    padding: 10px 0 ;
+}
+nav a{
+    display: block;
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+ nav a img{
+    width: 36px;
+    height: 34px;
+}
+nav span{
+    display: block;
+} 
+/* 秒殺快報 */
+.news{
+    position: relative;
+}
+.news .go_shopping{
+    background: url(https://img30.360buyimg.com/img/jfs/t1/227615/23/8080/1616/65782dd8F605d99af/0d97136b32d5ab1b.png)no-repeat 0 25px;
+    background-size: 60px 13px;
+    margin-left: 10px;
+    width: 95%;
+    height: 94px;
+    border-radius: 15px;
+    background-color: rgb(255, 119, 0);
+}
+.news .go_shopping p{
+   padding-top: 45px;
+   padding-left: 2px;
+   color: #fff;
+   font-size: 12px;
+}
+.news .go_shopping .go_shopping_btn{
+   margin-top: 7px;
+    margin-left: 2px;
+    text-align: center;
+    background-color: #fff;
+    width: 53px;
+    height: 16px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+.news .items{
+    position: absolute;
+    top: 2.5px;
+    right: 10px;
+    width: 78%;
+    height: 90px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.news .items a{
+    display: block;
+    float: left;
+    margin: 10px 0 0 0;
+    width: 25%;
+    text-align: center;
+}
+.news .items img{
+    width: 53px;
+    height: 53px;
+}
+.news .items span{
+    display: block;
+    color: #fa2c19;
+    font-size: 14px;
+    font-weight: 700;
+}
+/* 品牌旗艦 */
+.brand{
+    
+    color: #fff;
+}
+.brand img{
+    vertical-align: top;
+    width: 100%;
+}
+.discount_coupon{
+    background:url(https://down-tw.img.susercontent.com/file/c66a3acc02347ee248d8c43622de1313)no-repeat;
+
+}
+.brand_title{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 8px;
+}
+.brand_title span{
+    padding-left: 20px;
+}
+.brand_title a{
+    padding-right: 25px;
+    color: #fff;
+}
+
+
+.brand-goods{
+    margin: 0 auto;
+    width: 90%;
+    background-color: #fff;
+    overflow: hidden;
+}
+.brand-goods a{
+    position: relative;
+    display: block;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.brand-goods span{
+    display: block;
+}
+.brand-goods span img{
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+    padding: 0 20px;
+    width: 32px;
+    height: 24px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .09);
+    border-radius: 15px;
+}
+.brand-goods-text{
+    margin: 15px 0 8px;
+    color: #fa2c19;
+    font-size: 12px;
+}
