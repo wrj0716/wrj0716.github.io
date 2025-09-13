@@ -1,0 +1,42 @@
+html,
+body,
+header,
+menu,
+nav,
+main,
+article,
+aside,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+footer,
+ul,
+ol,
+li,
+table,
+tr,
+td,
+b,
+i,
+u,
+img,
+div,
+span {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+}
+
+img {
+    vertical-align: bottom;
+}
+
