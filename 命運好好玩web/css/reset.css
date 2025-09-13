@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+html,
+body,
+header,
+footer,
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+nav,
+menu,
+aside,
+main,
+article,
+div,
+span,
+ul,
+ol,
+li,
+img,
+hr {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-position: center bottom;
+}
+
+img {
+    vertical-align: bottom;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>人際 | 命運好好玩</title>
+</head>
+<body>
+    <header class="flex">
+        <h1><a href="../index.html">命運好好玩</a></h1>
+        <menu>
+            <ul>
+                <li><a href="../people/index.html">人際</a></li>
+                <li><a href="../people/love.html">愛情</a></li>
+                <li><a href="../people/job.html">工作</a></li>
+            </ul>
+        </menu>
+        <nav>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </nav>
+    </header>
+    <main id="game" class="flex">
+        <div class="box">
+            <h2 id="title">人際</h2>
+            <ol id="check"></ol>
+            <p id="result"></p>
+            <button type="button" id="btn">抽籤</button>
+            <button type="button" id="reset" onclick="window.location.reload()">再玩一次</button>
+        </div>
+    </main>
+    <footer>
+        <p>
+            Copyright &copy; 2024 JC-Wu.All rights reserved. <br>
+             版權所有&copy; 2024 JC-Wu.
+        </p>
+    </footer>
+    <div id="load">
+        <img src="../img/2.png" alt="">
+        <img src="../img/1.png" alt="">
+    </div>
+</body>
+</html>
+<script src="../js/menu.js"></script>
+<script src="../js/data.js"></script>
+<script>
+    let data = dataList.people
+    for (const key in data) {
+        let item = document.createElement('li')
+        item.classList.add('item')
+        item.textContent = key
+        document.querySelector('#check').appendChild(item)
+        console.log(key);
+    }
+    
+    let items = document.querySelectorAll('.item')
+    
+    for (const ite of items) {
+        ite.addEventListener('mouseover',function(){
+            this.classList.add('big')
+        })
+        ite.addEventListener('mouseout',function(){
+            this.classList.remove('big')
+        })
+        ite.addEventListener('click',function(){
+            for (i of items){
+                i.classList.remove('click')
+            }
+            this.classList.add('click')
+
+            let result = document.querySelector('#result')
+            let txt = ''
+            let random = Math.floor(Math.random()*data[this.textContent].length)
+            result.style.display = 'block'
+            txt = data[this.textContent][random]
+            let title = this.textContent
+            
+            let btn = document.querySelector('#btn')
+            btn.addEventListener('click',function(){
+                let load = document.querySelector('#load')
+                load.style.display = 'block'
+                setTimeout(function(){
+                    load.remove()
+                    document.querySelector('#check').remove()
+                    result.textContent = txt
+                    document.querySelector('#title').textContent =title
+                    document.querySelector('#reset').style.display = 'block'
+                    // btn.style.display = 'none'
+                    btn.remove()
+                }, 2000);
+            })
+            
+            
+            
+        })
+    }
+    
+    
+</script>
