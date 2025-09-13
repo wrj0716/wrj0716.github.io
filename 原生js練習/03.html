@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header{
+            width: 100%;
+            height: 64px;
+            line-height: 64px;
+            text-align: center;
+            box-shadow: 0 3px 3px gray;
+            background-color: #ccc;
+        }
+        #box{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 2em;
+        }
+        #box .item{
+            width: calc(100% / 5);
+            min-width: 250px;
+            padding: 1em;
+            margin: 1em;
+            background-color: bisque;
+        }
+        #box .item h3,#box .item h4{
+            text-align: center;
+            line-height: 1.8em;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <select id="address"></select>
+    </header>
+    <div id="box"></div>
+</body>
+</html>
+<script>
+    let url = "https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/F-C0032-003?Authorization=rdec-key-123-45678-011121314&format=JSON";
+    fetch(url)
+    .then(function(resp){
+        return resp.json();
+    })
+    .then(function(dataList){
+        //資料獲取
+        let data = dataList.cwaopendata.dataset.location;
+        console.log(data);
+
+        //製作下拉選單
+        let address = document.getElementById("address");
+        for(i=0;i<data.length;i++){
+            let option = document.createElement("option");
+            option.value = i;
+            option.textContent = data[i].locationName;
+            address.appendChild(option);
+        }
+
+        //生成內容
+        address.addEventListener("change",function(){
+            for(i=0;i<data[0].weatherElement[0].time.length;i++){
+                let item = document.createElement("div");
+                item.classList.add("item");
+                let h3 = document.createElement("h3");
+                h3.textContent = data[this.value].locationName;
+                item.appendChild(h3);
+                let h4 = document.createElement("h4");
+                h4.textContent = "日期：" + data[0].weatherElement[0].time[i].startTime.slice(0,10);
+                item.appendChild(h4);
+                let p1 = document.createElement("p");
+                p1.textContent = "天氣：" + data[0].weatherElement[0].time[i].parameter.parameterName;
+                item.appendChild(p1);
+    
+                box.appendChild(item);
+                console.log(this.value)
+            }
+        })
+        
+        
+    })
+    .catch(function(error){
+        console.error("資訊錯誤：",error);
+    })
+</script>

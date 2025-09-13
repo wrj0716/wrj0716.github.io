@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            padding: 20px;
+            width: 300px;
+            margin: 200px auto;
+            background-color: antiquewhite;
+            font-size: 0;
+            line-height: 40px;
+        }
+        .box h2{
+            font-size: 30px;
+            text-align: center;
+        }
+        .box h4{
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;
+        }
+        .box input{
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+            padding: .25em;
+        }
+        .box button{
+            font-size: 20px;
+            width: 50%;
+            padding: .25em;
+        }
+        .box li{
+            font-size: 20px;
+            list-style: inside;
+            list-style-type: decimal;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>終極密碼</h2>
+        <h4>數值範圍:1~99</h4>
+        <input type="number" min="1" max="99" id="text" placeholder="請輸入數字" autofocus>
+        <button id="again" onclick="window.location.reload()" disabled="true">再玩一次</button>
+        <button id="sub" >提交</button>
+        <ul id="result">
+            <!-- <li>123</li> -->
+        </ul>
+    </div>
+<!--     
+    1.輸入數字，生成元素
+    2.按下提交，出現
+    3.生成隨機數
+    4.再玩一次
+    5.Enter -->
+    <script>
+        let text = document.querySelector('#text')
+        let again = document.querySelector('#again')
+        let sub = document.querySelector('#sub')
+        let result = document.querySelector('#result')
+        let random = Math.floor(Math.random()*100) 
+        console.log(random);
+
+        let min = 0
+        let max = 100
+        let txt;
+        
+        sub.addEventListener('click',function(){
+            func()
+        })
+        text.addEventListener('keypress',function(e){
+           if(e.key == 'Enter'){
+            func()
+           }
+        })
+        function func(){
+            let textValue = Number(text.value)
+            
+            let li = document.createElement('li')
+            if(textValue == random){
+                txt = "恭喜猜對"
+                sub.disabled =  true
+                again.disabled = false
+                text.disabled = true
+            }else if(textValue <= min){
+                txt = "不可小於"+min
+            }else if(textValue >= max){
+                txt = "不可大於"+max
+            }else if(textValue>min && textValue<random){
+                min = textValue
+                txt = min + '~' + max
+            }else if(textValue<max && textValue>random){
+                max = textValue
+                txt = min +'~'+ max 
+            }
+            li.textContent = txt
+            
+            result.appendChild(li)
+            text.value = ''
+        }
+    </script>
+</body>
+</html>

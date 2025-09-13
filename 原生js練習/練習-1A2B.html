@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            font-family: sans-serif;
+            font-size: 0;
+            line-height: 40px;
+            background-color: pink;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px gray;
+            position: relative;
+        }
+        .box h2{
+            font-size: 30px;
+            text-align: center;
+        }
+        .box h3{
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;
+            color: red;
+        }
+        .box input{
+            width: 100%;
+            font-size: 20px;
+            padding: .25em;
+            text-align: center;
+        }
+        .box button{
+            width: 50%;
+            font-size: 20px;
+            padding: .25em;
+        }
+        .box ul{
+            font-size: 18px;
+            list-style-position: inside;
+            list-style-type: decimal;
+            padding: .5em 1em;
+        }
+        #start{
+            width: 100%;
+            height: 100%;
+            background-color: purple;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            padding: 25% 0;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>猜數字遊戲</h2>
+        <h3>剩餘時間: <span id="timer">00:00</span>,次數: <span id="count">8</span> </h3>
+        <input type="number" placeholder="請輸入四位數字" id="user" autofocus>
+        <button type="button" id="reset" onclick="window.location.reload()" disabled>再玩一次</button>
+        <button type="button" id="btn">提交</button>
+        <ul id="result"></ul>  
+        <div id="start">
+            <button id="startBtn" onclick="start()">開始遊戲</button>
+        </div>  
+    </div>
+
+    <script>
+        function start(){
+            document.querySelector('#start').remove()
+        let timer = document.querySelector('#timer')
+        let count = document.querySelector('#count')
+        let user = document.querySelector('#user')
+        let reset = document.querySelector('#reset')
+        let btn = document.querySelector('#btn')
+        let result = document.querySelector('#result')
+        let countCount = 8
+        
+        let randomArr = []
+        
+        function randomFunc(){
+            for(i=0;i<4;i++){
+                randomArr[i] = Math.floor(Math.random()*10)
+            }
+            if(randomArr[0] == randomArr[1] || randomArr[0] == randomArr[2] || randomArr[0] == randomArr[3] || randomArr[1] == randomArr[2] || randomArr[1] == randomArr[3] || randomArr[2] == randomArr[3]){
+                randomFunc()
+            }
+        }
+        randomFunc()
+        console.log(randomArr);
+
+        let txt ;
+        btn.addEventListener('click',function(){
+            calc()
+        })
+        user.addEventListener('keypress',function(e){
+            if(e.key == 'Enter'){
+                calc()
+            }
+        })
+
+        function calc(){
+            
+            let li = document.createElement('li')
+            let arr = []
+            for(i=0;i<4;i++){
+                arr[i]=Number(user.value[i])
+            }
+            if(user.value.length<4 || user.value.length>4){
+                txt = "請輸入4個數字"
+            }else if(arr[0] == randomArr[0] && arr[1] ==randomArr[1] && arr[2] ==randomArr[2] && arr[3] ==randomArr[3]){
+                txt="恭喜猜對"
+                user.disabled = true
+                reset.disabled = false
+                btn.disabled = true
+                clearInterval(setTimer)
+            }else if(arr[0] == arr[1] || arr[0] == arr[2] || arr[0] == arr[3] || arr[1] == arr[2] || arr[1] == arr[3] || arr[2] == arr[3] ){
+                txt = "請勿重複輸入相同數字"
+            }else{
+                // 判斷A:同位置同數字
+                let a = 0
+                for(i=0;i<4;i++){
+                    if(arr[i] == randomArr[i]){
+                        a++
+                    }
+                }
+                // 判斷B:擁有相同數字，但不同位置
+                let b = 0
+                for(x=0;x<4;x++){
+                    for(y=0;y<4;y++){
+                        if(arr[x] == randomArr[y]){
+                            b++
+                        }
+                    }
+                }
+                b = b - a
+                txt = a + "A" + b + "B," + user.value
+            }
+            
+            
+            li.textContent = txt
+            result.appendChild(li)
+            user.value = ''
+            user.focus()
+
+            countCount--
+            count.textContent = countCount
+            
+            if(countCount<=0){
+                let li = document.createElement('li')
+                li.textContent ="已達次數上限"
+                user.disabled = true
+                reset.disabled = false
+                btn.disabled = true
+                clearInterval(setTimer)
+            }
+        }
+
+        let totalTimer = 180
+        let setTimer = setInterval(function(){
+            totalTimer--
+            let min = Math.floor(totalTimer / 60)
+            let sec =  totalTimer % 60
+            if(min<10){
+                min = '0'+min
+            }
+            if(sec<10){
+                sec = '0'+sec
+            }
+            timer.textContent = `${min}:${sec}`
+            // console.log(totalTimer);
+            if(totalTimer==0){
+                let li = document.createElement('li')
+                li.textContent = '時間到，遊戲結束'
+                result.appendChild(li)
+                user.disabled = true
+                reset.disabled = false
+                btn.disabled = true
+            clearInterval(setTimer)
+        }
+        },1000)
+       
+        }
+        
+
+    </script>
+</body>
+</html>
